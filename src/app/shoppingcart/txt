@@ -1,0 +1,101 @@
+ <!-- Shopping cart table -->
+ <div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col" class="border-0 bg-light">
+          <div class="p-2 px-3 text-uppercase">Product</div>
+        </th>
+        <th scope="col" class="border-0 bg-light">
+          <div class="py-2 text-uppercase">Price</div>
+        </th>
+        <th scope="col" class="border-0 bg-light">
+          <div class="py-2 text-uppercase">Quantity</div>
+        </th>
+        <th scope="col" class="border-0 bg-light">
+          <div class="py-2 text-uppercase">Remove</div>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row" class="border-0">
+          <div class="p-2">
+            <img src="../../assets/img/galaxynote20.png" alt="" width="70" class="img-fluid rounded shadow-sm">
+            <div class="ml-3 d-inline-block align-middle">
+              <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block align-middle">Galaxy Note 20</a></h5><span class="text-muted font-weight-normal font-italic d-block">Category: Watches</span>
+            </div>
+          </div>
+        </th>
+        <td class="border-0 align-middle"><strong>5220 kr</strong></td>
+
+
+        <td class="border-0 align-middle">
+          <div>
+          <span class="input-group-btn">
+            <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+                <span><i class="fa fa-minus"></i></span>
+            </button>
+        </span>
+        <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">
+        <span class="input-group-btn">
+            <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+                <span><i class="fa fa-plus"></i></span>
+            </button>
+        </span>
+      </div>
+        </td>
+
+
+        <td class="border-0 align-middle"><a href="#" class="text-dark"><i class="fa fa-times"></i></a></td>
+      </tr>
+      <tr>
+        <th scope="row">
+          <div class="p-2">
+            <img src="../../assets/img/galaxyS10png.png" alt="" width="70" class="img-fluid rounded shadow-sm">
+            <div class="ml-3 d-inline-block align-middle">
+              <h5 class="mb-0"><a href="#" class="text-dark d-inline-block">Galaxy S10</a></h5><span class="text-muted font-weight-normal font-italic">Category: Electronics</span>
+            </div>
+          </div>
+        </th>
+        <td class="align-middle"><strong>5142 kr</strong></td>
+        <td class="align-middle">
+          <div>
+            <span class="input-group-btn">
+              <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+                  <span><i class="fa fa-minus"></i></span>
+              </button>
+          </span>
+          <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+                  <span><i class="fa fa-plus"></i></span>
+              </button>
+          </span>
+        </div>
+
+        </td>
+        <td class="align-middle"><a href="#" class="text-dark"><i class="fa fa-times"></i></a>
+        </td>
+      </tr>
+     
+    </tbody>
+  </table>
+
+
+  <div class="col summary py-5 p-4 bg-white rounded shadow-sm" >
+      <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Order summary </div>
+      <div class="p-4">
+        <p class="font-italic mb-4">Shipping and additional costs are calculated based on values you have entered.</p>
+        <ul class="list-unstyled mb-4">
+          <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Order Subtotal </strong><strong>$390.00</strong></li>
+          <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Shipping and handling</strong><strong>$10.00</strong></li>
+          <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Tax</strong><strong>$0.00</strong></li>
+          <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Total</strong>
+            <h5 class="font-weight-bold">$400.00</h5>
+          </li>
+        </ul>
+        <button class="btn btn-dark rounded-pill py-2 btn-block" routerLink="/order" routerLinkActive="active">Procceed to checkout</button>
+      </div>
+</div>
+<!-- End -->

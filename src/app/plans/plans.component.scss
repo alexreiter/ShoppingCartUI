@@ -1,0 +1,257 @@
+
+.box{
+    //background: linear-gradient(0deg, rgba(80,80,228,1) 0%, rgba(13,19,71,1) 100%);
+    //margin-bottom: 100px;
+    min-height: 300px;
+   // position: relative;
+ 
+}
+
+.banner{
+    max-height: 50px;
+    background-color: #add8e6;
+
+}
+
+.banner-inner{
+    padding: 15px;
+    text-align: center;
+}
+
+#x{
+    font-size: 1rem;  
+    margin-left: 100px; 
+    color: #ffffff; 
+}
+
+img{
+    background-size: cover;
+    position: relative;
+}
+
+h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: whitesmoke;
+    text-align: center;
+    padding-top: 40px;
+    font-size: 50px;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+}
+
+/* DIRTY Responsive pricing table CSS */
+
+/* 
+- make mobile switch sticky
+*/
+* {
+    box-sizing:border-box;
+    padding:0;
+    margin:0;
+     outline: 0;
+  }
+  body { 
+    font-family:Helvetica Neue,Helvetica,Arial,sans-serif;
+    padding:14px;
+  }
+  article {
+    width:100%;
+    max-width:80%;
+    margin:0 auto;
+    height:1000px;
+    //position:relative;
+    background-color: white;
+  }
+  ul {
+    display:flex;
+    top:0px;
+    z-index:10;
+    padding-bottom:14px;
+  }
+  li {
+    list-style:none;
+    flex:1;
+  }
+  li:last-child {
+    border-right:1px solid #DDD;
+  }
+  button  {
+    width:100%;
+    border: 1px solid #DDD;
+    border-right:0;
+    border-top:0;
+    padding: 10px;
+    background:#FFF;
+    font-size:14px;
+    font-weight:bold;
+    height:60px;
+    color:#999
+  }
+  li.active button {
+    background:#fff0f3;
+    color:#000;
+  }
+  table { border-collapse:collapse; table-layout:fixed; width:100%; }
+  th { background:#fff0f3; display:none; }
+  td, th {
+    height:53px
+  }
+  td,th { border:1px solid #DDD; padding:10px; empty-cells:show; }
+  td,th {
+    text-align:left;
+  }
+  td+td, th+th {
+    text-align:center;
+    display:none;
+  }
+  td.default {
+    display:table-cell;
+  }
+  .bg-purple {
+    border-top:3px solid #A32362;
+  }
+  .bg-blue {
+    border-top:3px solid #0097CF;
+  }
+  .sep {
+    background:#fff0f3;
+    font-weight:bold;
+  }
+  .txt-l { font-size:28px; font-weight:bold; }
+  .txt-top { position:relative; top:-9px; left:-2px; }
+  .tick { font-size:18px; color:#ff0081; }
+  .hide {
+    border:0;
+    background:none;
+  }
+  
+  @media (min-width: 640px) {
+    ul {
+      display:none;
+    }
+    td,th {
+      display:table-cell !important;
+    }
+    td,th {
+      width: 330px;
+    
+    }
+    td+td, th+th {
+      width: auto;
+    }
+  }
+
+  .wrapper{
+      width: 80%;
+      margin: 0 auto;
+      margin-top: 50px;
+      margin-bottom: 50px;
+  }
+
+  mat-grid-tile{
+    background: linear-gradient(0deg, rgba(215,227,250,1) 0%, rgba(100,149,237,1) 100%);
+}
+
+  #cardtitle{
+      font-size: 24px;
+      color: white;
+      font-weight: bold;
+  }
+
+  #datatext{
+      font-size: 24px;
+      color: white;
+      font-weight: bold;
+    
+  }
+
+  h3{
+      font-size: 1.2em;
+      font-weight: 600;
+      color: white;
+      }
+
+      #pricetag{
+          color: white;
+      }
+
+  button{
+    height: 50px; 
+    background-color: #130786;
+    border-color: #130786;
+    color: white;
+ }
+
+  #plantitle{
+      text-align: center;
+      font-size: 30px;
+
+  }
+
+$base: 1.5rem;
+
+.chevron-container {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ width: 100%;
+ height: 20vh;
+ margin-bottom: 100px;
+}
+
+.chevron {
+  position: absolute;
+  width: $base * 3.5;
+  height: $base * 0.8;
+  opacity: 0;
+  transform: scale(0.2);
+  animation: move-chevron 3s ease-out infinite;
+}
+
+.chevron:first-child {
+  animation: move-chevron 3s ease-out 1s infinite;
+}
+
+.chevron:nth-child(2) {
+  animation: move-chevron 3s ease-out 2s infinite;
+}
+
+.chevron:before,
+.chevron:after {
+ content: '';
+ position: absolute;
+ top: 0;
+ height: 100%;
+ width: 50%;
+ background: #2c3e50;
+}
+
+.chevron:before {
+ left: 0;
+ transform: skewY(30deg);
+}
+
+.chevron:after {
+ right: 0;
+ width: 50%;
+ transform: skewY(-30deg);
+}
+
+@keyframes move-chevron {
+ 25% {
+  opacity: 1;
+	}
+ 33.3% {
+  opacity: 1;
+  transform: translateY($base * 3.8);
+ }
+ 66.6% {
+  opacity: 1;
+  transform: translateY($base * 5.2);
+ }
+ 100% {
+  opacity: 0;
+  transform: translateY($base * 8) scale(0.5);
+ }
+}

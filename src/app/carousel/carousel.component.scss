@@ -1,0 +1,35 @@
+.carousel-slide{
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.carousel-indicators{
+  position: absolute;
+  top: 90%;
+  left: 0;
+}
+
+
+.slider_btn{
+  position: absolute;
+  top: 70%;
+  left: 25%;
+  background-color: lightcoral;
+  color: beige;
+  border: none;
+  border-radius: 5px;
+  height: 55px;
+  width: 200px;
+  font-size: 1rem;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  letter-spacing: 2.5px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.slider_btn:hover{
+  background-color: black;
+  box-shadow: 0px 15px 20px rgb(46, 229, 157, 0.4);
+  color: #ffb6c1;
+  transform: translateY(-7px);
+}

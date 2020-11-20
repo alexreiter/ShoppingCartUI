@@ -1,0 +1,45 @@
+
+
+<body>
+
+    <div class="wrap">
+        <div class="container-fluid">
+
+    
+                <mat-horizontal-stepper linear>
+
+                    <mat-step label="Info">
+                        <p>Your Details</p>
+
+                        <button mat-button matStepperNext>Next</button>
+
+                    </mat-step>
+
+                    <mat-step label="Shipping">
+                        <p>Shipping</p>
+                        <div>
+                            <button mat-button matStepperPrevious>Back</button>
+                            <button mat-button matStepperNext>Next</button>
+
+                        </div>
+                    </mat-step>
+
+                    <mat-step label="Summary">
+                        <p>Order Summary</p>
+                        <button mat-button matStepperPrevious>Back</button>
+                        <button mat-button matStepperNext>Next</button>
+                    </mat-step>
+
+                    
+                    <mat-step label="Payment">
+                        <p>Payment</p>
+                        <button mat-button matStepperPrevious>Back</button>
+                    </mat-step>
+
+                </mat-horizontal-stepper>
+          
+
+            </div>
+    </div>
+
+</body>

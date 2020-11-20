@@ -1,0 +1,179 @@
+
+<body>
+
+<header>
+
+  <!--Banner-->
+<div class="banner">
+  <div class="banner-inner">
+   <span style="font-weight: bold;" >Want to chat before you buy? We are here for you, just give us a call on 2363526845</span>
+   <i class="fa fa-times" id="x"></i>
+</div>
+</div>
+
+  <!--Top content with search bar-->
+<section class="box">
+    <h1>Phones</h1>
+    <h2>Do You Already Know What You Want?</h2>
+    <form class="form-inline">
+        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">GO</button>
+      </form>
+</section>
+
+</header>
+
+
+<!--Displaying Products in the shop-->
+<div class="content" fxLayout="row wrap" fxLayoutGap="15px grid" >
+  <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" class=" col-md-3 mx-auto my-5" *ngFor="let card of cards" style="padding: 10px;">
+
+
+    <mat-card class="mat-elevation-z4 card">
+      <mat-icon class="heart" aria-hidden="false" aria-label="favorite">favorite_border</mat-icon> 
+
+      <div class="imgbox">
+        <img class="img" mat-card-image [src]="card.img" alt="Card image cap">
+       
+        <mat-card-header><h2 id="brand">{{card.brand}}</h2></mat-card-header>
+        <mat-card-header><h1 id="type">{{card.title}}</h1></mat-card-header>
+        <div class="star-inline">
+        <mat-icon class="star" aria-hidden="false" aria-label="star" style="font-size: medium;">star</mat-icon> 
+        <mat-icon class="star" aria-hidden="false" aria-label="star" style="font-size: medium;">star</mat-icon> 
+        <mat-icon class="star" aria-hidden="false" aria-label="star" style="font-size: medium;">star</mat-icon> 
+        <mat-icon class="star" aria-hidden="false" aria-label="star" style="font-size: medium;">star</mat-icon> 
+        <div class="colors">
+          <ul>
+            <li>
+              <label>
+                <input type="radio" name="color" value="black">
+                <span class="swatch" style="background-color:#222"></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="color" value="blue">
+                <span class="swatch" style="background-color:#6e8cd5"></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="color" value="silver">
+                <span class="swatch" style="background-color: rgb(160, 156, 156)"></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="color" value="green">
+                <span class="swatch" style="background-color:#44c28d"></span>
+              </label>
+            </li>
+          </ul> 
+        </div> 
+      </div>
+
+      </div>
+      <mat-card-content>
+        <ul class="list-group list-group-flush" style="width: 100%;">
+          <li class="list-group-item">{{card.upfront}}</li>
+          <li class="list-group-item">{{card.monthly}}</li>
+          <li class="list-group-item">{{card.minprice}}</li>
+        </ul>
+      </mat-card-content>
+      <mat-card-actions>
+        <button class="detail_btn" routerLink="/itempage" routerLinkActive="active">More</button>
+      </mat-card-actions>
+
+    </mat-card>
+  </div>
+
+</div>
+
+
+<div class="sidebar">
+  <nav>
+    <h2 id="filtertitle">Shop</h2>
+    <div class="divider inset"></div>
+    <ul>
+    <li><a href="#"><mat-icon aria-hidden="false" aria-label="phone">phone_iphone</mat-icon>Phones</a></li>
+    <li><a href="#"><mat-icon aria-hidden="false" aria-label="tablet">tablet_android</mat-icon>Tablets</a></li>
+    <li><a href="#"><mat-icon aria-hidden="false" aria-label="smartwatch">watch</mat-icon>Smart Watches</a></li>
+    <li><a href="#"><mat-icon aria-hidden="false" aria-label="Accessories">headset</mat-icon>Accessories</a></li>
+  </ul>
+
+  </nav>
+
+  <div>
+  <h2 id="filtertitle" class="mb-3" style="margin-top: 50px;">Filter</h2>
+  <div class="divider inset"></div>
+
+  <h3 id="dealstitle">Deals</h3>
+
+  <div class="form-check pl-0 mb-3">
+    <input type="checkbox" class="form-check-input filled-in" id="new">
+    <label class="form-check-label small card-link-secondary" for="new">New</label>
+  </div>
+  <div class="form-check pl-0 mb-3">
+    <input type="checkbox" class="form-check-input filled-in" id="onsale">
+    <label class="form-check-label small  card-link-secondary" for="used">On Sale</label>
+  </div>
+  <div class="form-check pl-0 mb-3">
+    <input type="checkbox" class="form-check-input filled-in" id="specialoffer">
+    <label class="form-check-label small  card-link-secondary" for="collectible">Special Offer</label>
+  </div>
+ 
+  <div class="divider inset"></div>
+
+  <h3 id="dealstitle">Brands</h3>
+
+  <div class="form-check pl-0 mb-3">
+    <input type="checkbox" class="form-check-input filled-in" id="apple">
+    <label class="form-check-label small card-link-secondary" for="new">Apple</label>
+  </div>
+  <div class="form-check pl-0 mb-3">
+    <input type="checkbox" class="form-check-input filled-in" id="samsung">
+    <label class="form-check-label small card-link-secondary" for="used">Samsung</label>
+  </div>
+  <div class="form-check pl-0 mb-3">
+    <input type="checkbox" class="form-check-input filled-in" id="huawei">
+    <label class="form-check-label small  card-link-secondary" for="collectible">Huawei</label>
+  </div>
+  <div class="form-check pl-0 mb-3">
+    <input type="checkbox" class="form-check-input filled-in" id="oneplus">
+    <label class="form-check-label small card-link-secondary" for="new">OnePlus</label>
+  </div>
+  <div class="form-check pl-0 mb-3">
+    <input type="checkbox" class="form-check-input filled-in" id="nokia">
+    <label class="form-check-label small  card-link-secondary" for="used">Nokia</label>
+  </div>
+  <div class="form-check pl-0 mb-3">
+    <input type="checkbox" class="form-check-input filled-in" id="motorola">
+    <label class="form-check-label small  card-link-secondary" for="collectible">Motorola</label>
+  </div>
+  <div class="form-check pl-0 mb-3">
+    <input type="checkbox" class="form-check-input filled-in" id="sony">
+    <label class="form-check-label small card-link-secondary" for="collectible">Sony</label>
+  </div>
+ 
+  <div class="divider inset"></div>
+
+  <h3 id="dealstitle">Operating System</h3>
+
+  <div class="form-check pl-0 mb-3">
+    <input type="checkbox" class="form-check-input filled-in" id="google">
+    <label class="form-check-label small card-link-secondary" >Google Android</label>
+  </div>
+  <div class="form-check pl-0 mb-3">
+    <input type="checkbox" class="form-check-input filled-in" id="onsale">
+    <label class="form-check-label small card-link-secondary" >Apple iOS</label>
+  </div>
+
+
+  <div class="divider inset"></div>
+
+
+</div>
+</div>
+
+<footer id="footer"></footer>
+</body>

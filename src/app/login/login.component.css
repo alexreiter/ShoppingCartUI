@@ -1,0 +1,26 @@
+
+.login-wrap{
+    padding: 100px;
+    align-items: center;
+}
+
+.login-box{
+    width: 35%;
+    margin: 0 auto;
+    background-color: white;
+   
+}
+
+.login_btn{
+    width: 100%;
+    min-height: 40px;
+    background-color: cornflowerblue;
+    border-color: cornflowerblue;
+    color: white;
+    font-size: 1.5em;
+    border-radius: 5px;
+}
+
+.fa{
+    font-size: 1.5em;
+}
