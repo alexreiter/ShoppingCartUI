@@ -1,0 +1,223 @@
+{
+    "phones": [
+      {
+      "id": 1,
+      "brand": "Samsung",
+      "title" : "Galaxy A21s",
+      "memory": ["64GB" , "128GB" , "256GB"],
+      "specification":{
+        "camera": "48MP",
+        "chargingtime": "Fast-charge capable",
+        "weight": "191g",
+        "screensize": "6.5 inch",
+        "dataconnectivity": "4G",
+        "battery": "5000mAh",
+        "dimensions": "163.7 x 75.3 x 8.9mm",
+        "operatingsystem": "Android 10.0 with One UI 2.1",
+        "processor": "EXYNOS 850 Octa-core 2.0Ghz",
+        "facialrecognition": "Yes"
+
+
+      },
+      "upfront": "200 kr upfront",
+      "monthly": "140 kr/month (36 months)",
+      "minprice": "minimum price 6560 kr",
+      "color": "red, blue, black, grey",
+       "img": "../assets/img/samsung.png", 
+       "category": 1
+    },
+    {
+      "id": 2,
+      "brand": "Samsung",
+      "title" : "Galaxy S20 FE",
+      "specification":{
+        "camera": "32MP",
+        "chargingtime": "Fast-charge capable",
+        "weight": "190g",
+        "screensize": "6.5 inch",
+        "dataconnectivity": "4G",
+        "battery": "4500mAh",
+        "dimensions": "159.8 x 74.5 x 8.4mm",
+        "operatingsystem": "Android 10.0 with One UI 2.5",
+        "processor": "Exynos 990 (up to 2.75GHz)",
+        "facialrecognition": "Yes"
+
+
+      },
+      "upfront": "175 kr upfront",
+      "monthly": "155 kr/month (36 months)",
+      "minprice": "minimum price 6860 kr",
+      "color": "bronze, blue, black, grey",
+      "DetailButtonText": "Read More",
+      "img": "../assets/img/GalaxyS20.png", 
+      "category": 1
+    }, 
+    {
+      "id": 3,
+      "brand": "Apple",
+      "title": "iPhone 11",
+      "specification":{
+        "camera": "12MP",
+        "chargingtime": "Fast-charge capable",
+        "weight": "194g",
+        "screensize": "6.1 inch",
+        "dataconnectivity": "4G",
+        "battery": "4500mAh",
+        "dimensions": "150.9 x 75.7 x 8.3mm ",
+        "operatingsystem": "iOS 13",
+        "processor": "A13 Bionic",
+        "facialrecognition": "Yes"
+
+
+      },
+      "upfront": "200 kr upfront",
+      "monthly": "155 kr/month (36 months)",
+      "minprice": "minimum price 6860 kr",
+      "color": "bronze, blue, black, grey",
+      "DetailButtonText": "Read More",
+      "img": "../assets/img/iphone11.png"
+    },
+    {
+      "id": 4,
+      "brand": "Huawei",
+      "title" : "Nova 5T",
+      "specification":{
+        "camera": "48MP",
+        "chargingtime": "Fast-charge capable",
+        "weight": "174g",
+        "screensize": "6.1 inch",
+        "dataconnectivity": "4G",
+        "battery": "3750mAh",
+        "dimensions": "154.25mm x 73.97mm x 7.87mm",
+        "operatingsystem": "Android 9",
+        "processor": "Huawei Kirin 980",
+        "facialrecognition": "Yes"
+
+
+      },
+      "upfront": "100 kr upfront",
+      "monthly": "145 kr/month (36 months)",
+      "minprice": "minimum price 6500 kr",
+      "color": "bronze, blue, black, grey",
+      "DetailButtonText": "Read More",
+      "img": "../assets/img/nova5.png"
+    },
+    {
+      "id": 5,
+      "brand": "Apple",
+      "title" : "iPhone 12",
+      "specification":{
+        "camera": "12MP",
+        "chargingtime": "Fast-charge capable",
+        "weight": "162g",
+        "screensize": "6.1 inch",
+        "dataconnectivity": "5G",
+        "battery": "3750mAh",
+        "dimensions": "146.7 x 71.5 x 7.4mm",
+        "operatingsystem": "iOS 14",
+        "processor": "A14 Bionic",
+        "facialrecognition": "Yes"
+
+
+      },
+      "upfront": "175 kr upfront",
+      "monthly": "165 kr/month (36 months)",
+      "minprice": "minimum price 6460 kr",
+      "color": "bronze, blue, black, grey",
+      "DetailButtonText": "Read More",
+      "img": "../assets/img/iphone12.png"
+    },
+    {
+      "id": 6,
+      "brand": "Samsung",
+      "title" : "Galaxy S10",
+      "specification":{
+        "camera": "16MP",
+        "chargingtime": "Fast-charge capable",
+        "weight": "198g",
+        "screensize": "6.7 inch",
+        "dataconnectivity": "5G",
+        "battery": "3750mAh",
+        "dimensions": "146.7 x 71.5 x 7.4mm",
+        "operatingsystem": "Android 9",
+        "processor": "Exynos 9820",
+        "facialrecognition": "Yes"
+
+
+      },
+      "upfront": "250 kr upfront",
+      "monthly": "185 kr/month (36 months)",
+      "minprice": "minimum price 6600 kr",
+      "color": "bronze, blue, black, grey",
+      "DetailButtonText": "Read More",
+      "img": "../assets/img/galaxyS10png.png"
+    },
+    {
+      "id": 7,
+      "brand": "Samsung",
+      "title" : "Galaxy Note 20",
+      "upfront": "225 kr upfront",
+      "specification":{
+        "camera": "64MP",
+        "chargingtime": "Fast-charge capable",
+        "weight": "198g",
+        "screensize": "6.7 inch",
+        "dataconnectivity": "5G",
+        "battery": "4300mAh",
+        "dimensions": "161.6 x 75.2 x 8.3mm",
+        "operatingsystem": "Android 10.0 with One UI 2.5",
+        "processor": "Exynos 990 (up to 2.73GHz)",
+        "facialrecognition": "Yes"
+      },
+      "monthly": "150 kr/month (36 months)",
+      "minprice": "minimum price 7560 kr",
+      "color": "bronze, blue, black, grey",
+      "DetailButtonText": "Read More",
+      "img": "../assets/img/galaxynote20.png"
+    },
+    {
+      "id": 8,
+      "brand": "Huawei",
+      "title" : "P30 Pro",
+      "specification":{
+        "camera": "40MP",
+        "chargingtime": "Fast-charge capable",
+        "weight": "192g",
+        "screensize": "6.47 inch",
+        "dataconnectivity": "4G",
+        "battery": "4300mAh",
+        "dimensions": "158 x 73.4 x 8.41mm",
+        "operatingsystem": "Android 10 + EMUI 10.1",
+        "processor": "HUAWEI Kirin 980 CPU, Octa-core, 2 x Cortex A76 2.6 GHz + 2 x Cortex A76 1.92 GHz + 4 x Cortex A55 1.8Hz",
+        "facialrecognition": "Yes"
+      },
+      "upfront": "200 kr upfront",
+      "monthly": "185 kr/month (36 months)",
+      "minprice": "minimum price 6580 kr",
+      "color": "bronze, blue, black, grey",
+      "DetailButtonText": "Read More",
+      "img": "../assets/img/p30pro.png"
+    }
+    ],
+  
+    "categories":[
+      {
+        "category_id": 1,
+        "name": "Phones"
+      },
+      {
+        "category_id": 2,
+        "name": "Tablets"
+      },
+      {
+        "category_id": 3,
+        "name": "Smart Watches"
+      }, 
+      {
+        "category_id": 4,
+        "name": "Accessories"
+      }
+      
+    ]
+  
+  }

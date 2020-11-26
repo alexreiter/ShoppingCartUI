@@ -18,10 +18,15 @@ import { PlansComponent } from './plans/plans.component';
 import { LoginComponent } from './login/login.component';
 import { ItempageComponent } from './itempage/itempage.component';
 import { ShoppingcartComponent } from './shoppingcart/shoppingcart.component';
-import { OrderComponent } from './order/order.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { HttpClientModule } from '@angular/common/http';
+import { OrderSuccessComponent } from './order-success/order-success.component';
+import { CategoryService } from './services/category.service';
+import { PhonesService } from './services/phones.service';
+import { ProductdetailsComponent } from './productdetails/productdetails.component';
 
 
 
@@ -38,7 +43,9 @@ import { MatInputModule } from '@angular/material/input';
     LoginComponent,
     ItempageComponent,
     ShoppingcartComponent,
-    OrderComponent
+    CheckoutComponent,
+    OrderSuccessComponent,
+    ProductdetailsComponent,
     
   ],
   
@@ -54,10 +61,11 @@ import { MatInputModule } from '@angular/material/input';
     MatButtonModule, 
     MatStepperModule, 
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule, 
+    HttpClientModule
     
   ],
-  providers: [],
+  providers: [CategoryService, PhonesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

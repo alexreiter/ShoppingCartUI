@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { planinfos } from '../planinfos';
+import { PhonesService } from '../services/phones.service';
+
 
 @Component({
   selector: 'app-itempage',
@@ -9,10 +11,16 @@ import { planinfos } from '../planinfos';
 export class ItempageComponent implements OnInit {
 
   planinfo=planinfos;
+  articleId : String = '';
+  articleDetails : Object = {};
+ 
 
-  constructor() { }
+  constructor(private phonesService: PhonesService) { }
 
-  ngOnInit(): void {
+  ngOnInit()   {
+
+   
+    
   }
 
 }

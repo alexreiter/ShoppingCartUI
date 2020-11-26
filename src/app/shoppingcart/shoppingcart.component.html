@@ -1,93 +1,92 @@
-
-    
-     <!--Banner-->
+<!--Banner-->
 <div class="banner">
-    <div class="banner-inner">
-     <span style="font-weight: bold;" >Want to chat before you buy? We are here for you, just give us a call on 2363526845</span>
-     <i class="fa fa-times" id="x"></i>
+  <div class="banner-inner">
+    <span style="font-weight: bold;">Want to chat before you buy? We are here for you, just give us a call on
+      2363526845</span>
+    <i class="fa fa-times" id="x"></i>
   </div>
-  </div>
+</div>
 
-  <!-- Header -->
-  <section class="box">
-    <h1>Your Cart</h1>
-    </section>
-    <!-- End -->
+<!-- Header -->
+<section class="box">
+  <h1>Your Cart</h1>
+</section>
+<!-- End -->
 
 <div class="wrapper">
-<div class="container-fluid">
-  <div class="row">
+  <div class="container-fluid">
+    <div class="row">
 
-    <!--Shopping Cart Starts-->
-    <div class="col shoppingcart p-5 bg-light rounded shadow mb-5">
-      <i class="fa fa-times"></i>
-      <div class="row">
-        <div class="col product-img">
+      <!--Shopping Cart Starts-->
+      <div class="col shoppingcart p-5 bg-light rounded shadow mb-5">
+        <i class="fa fa-times"></i>
+        <div class="row">
+          <div class="col product-img">
             <img src="../../assets/img/galaxyS10png.png" alt="" class="img-fluid rounded shadow-sm">
-        </div>
-        <div class="col product-title">
-        <h3 class="heading">Samsung Galaxy S10</h3>
-        <p id="feature">256 GB</p>
-        <p id="feature">Black</p>
+          </div>
+          <div class="col product-title">
+            <h3 class="heading">Samsung Galaxy S10</h3>
+            <p id="feature">256 GB</p>
+            <p id="feature">Black</p>
+          </div>
+
+          <div class="col-auto">
+            Pay now:
+          </div>
+          <div class="col-auto"><b>299 kr</b></div>
         </div>
 
-        <div class="col-auto">
-        Pay now:
-        </div>
-        <div class="col-auto"><b>299 kr</b></div>
-      </div>
-
-      <div class="row">
-        <div class="col product-img">
+        <div class="row">
+          <div class="col product-img">
             <img src="../../assets/img/plan.png" alt="" class="img-fluid rounded shadow-sm">
+          </div>
+
+          <div class="col product-title">
+            <h3 class="heading">Essential Plan</h3>
+            <p id="feature">Free Data</p>
+            <p id="feature">Free Talk</p>
+          </div>
+          <div class="col-auto">Payment:</div>
+          <div class="col-auto"><b>199 kr</b></div>
+
+
         </div>
 
-        <div class="col product-title">
-        <h3 class="heading">Essential Plan</h3>
-        <p id="feature">Free Data</p>
-        <p id="feature">Free Talk</p>
+        <div class="quantity">
+          <button class="plus-btn" type="button" name="button">
+            <i class="fa fa-plus"></i>
+          </button>
+          <input type="text" name="name" value="1" width="50px">
+          <button class="minus-btn" type="button" name="button">
+            <i class="fa fa-minus"></i>
+
+          </button>
         </div>
-        <div class="col-auto">Payment:</div>
-        <div class="col-auto"><b>199 kr</b></div>
 
 
       </div>
-      
-      <div class="quantity">
-        <button class="plus-btn" type="button" name="button">
-          <i class="fa fa-plus"></i>
-        </button>
-        <input type="text" name="name" value="1" width="50px">
-        <button class="minus-btn" type="button" name="button">
-          <i class="fa fa-minus"></i>        
+      <!--Shopping Cart Ends-->
 
-        </button>
+
+      <!--Summary Box starts-->
+      <div class="col summary p-5 bg-grey rounded shadow mb-5">
+
+        <div id="monthly">
+          <div class="pricetxt">Due Monthly</div>
+          <div class="price">299 kr</div>
+        </div>
+
+        <div class="vertical"></div>
+
+        <div id="today">
+          <div class="pricetxt">Due Today</div>
+          <div class="price">399 kr</div>
+        </div>
+
+        <button class="checkout_btn" routerLink="/checkout" routerLinkActive="active">Start Checkout</button>
       </div>
 
-
-    </div>
-    <!--Shopping Cart Ends-->
-
-
-    <!--Summary Box starts-->
-    <div class="col summary p-5 bg-grey rounded shadow mb-5">
-
-      <div id="monthly">
-        <div class="pricetxt">Due Monthly</div>
-        <div class="price">299 kr</div>
-      </div>
-
-      <div class = "vertical"></div> 
-
-      <div id="today">
-        <div class="pricetxt">Due Today</div>
-        <div class="price">399 kr</div>
-      </div>
-
-      <button class="checkout_btn" routerLink="/order" routerLinkActive="active" >Start Checkout</button>
-    </div>
-
-    <!--Summary Box Ends-->
+      <!--Summary Box Ends-->
 
     </div>
   </div>
