@@ -2,8 +2,9 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
-import { PhonesService } from '../services/phones.service';
-import { Phone } from '../models//phone';
+import { PhonesService } from '../../services/phones.service';
+import { Phone } from '../../models//phone';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-productdetails',
@@ -12,12 +13,19 @@ import { Phone } from '../models//phone';
 })
 export class ProductdetailsComponent implements OnInit {
 
-
+  @Input('show-actions') showActions = true;
   phone : Phone;
 
   constructor(
               private route: ActivatedRoute, 
-              private phoneService: PhonesService) { }
+              private phoneService: PhonesService,
+              private cartService : CartService) { }
+
+
+              addToCart(phone:Phone){
+                
+
+              }
 
    ngOnInit() : void {
  
@@ -29,5 +37,5 @@ export class ProductdetailsComponent implements OnInit {
 
   }
 
- 
 }
+

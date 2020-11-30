@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { shoppingcarts } from '../shoppingcart';
+import { shoppingcarts } from 'src/app/shoppingcart';
 
 @Component({
   selector: 'navbar',

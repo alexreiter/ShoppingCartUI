@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { CategoryService } from '../services/category.service';
+import { CategoryService } from '../../services/category.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { PhonesService } from '../services/phones.service';
+import { PhonesService } from '../../services/phones.service';
 import { ProductdetailsComponent } from '../productdetails/productdetails.component';
-import { Phone } from '../models/phone';
+import { Phone } from '../../models/phone';
 
     @Component({
       selector: 'app-phones',

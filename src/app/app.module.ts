@@ -3,30 +3,30 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { NavbarComponent } from './navbar/navbar.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import {MatGridListModule} from '@angular/material/grid-list';
-import { PhonesComponent } from './phones/phones.component';
-import { FooterComponent } from './footer/footer.component';
-import { CarouselComponent } from './carousel/carousel.component';
-import { ShowcaseComponent } from './showcase/showcase.component';
+import { PhonesComponent } from './components/phones/phones.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
+import { ShowcaseComponent } from './components/showcase/showcase.component';
 import { FlexLayoutModule} from '@angular/flex-layout';
 import { MatCardModule } from "@angular/material/card";
 import { MatButtonModule } from "@angular/material/button";
-import { PlansComponent } from './plans/plans.component';
-import { LoginComponent } from './login/login.component';
-import { ItempageComponent } from './itempage/itempage.component';
-import { ShoppingcartComponent } from './shoppingcart/shoppingcart.component';
-import { CheckoutComponent } from './checkout/checkout.component';
+import { PlansComponent } from './components/plans/plans.component';
+import { LoginComponent } from './components/login/login.component';
+import { ShoppingcartComponent } from './components/shoppingcart/shoppingcart.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { HttpClientModule } from '@angular/common/http';
-import { OrderSuccessComponent } from './order-success/order-success.component';
+import { OrderSuccessComponent } from './components/order-success/order-success.component';
 import { CategoryService } from './services/category.service';
 import { PhonesService } from './services/phones.service';
-import { ProductdetailsComponent } from './productdetails/productdetails.component';
+import { CartService } from './services/cart.service';
+import { ProductdetailsComponent } from './components/productdetails/productdetails.component';
 
 
 
@@ -41,7 +41,6 @@ import { ProductdetailsComponent } from './productdetails/productdetails.compone
     ShowcaseComponent,
     PlansComponent,
     LoginComponent,
-    ItempageComponent,
     ShoppingcartComponent,
     CheckoutComponent,
     OrderSuccessComponent,
@@ -65,7 +64,7 @@ import { ProductdetailsComponent } from './productdetails/productdetails.compone
     HttpClientModule
     
   ],
-  providers: [CategoryService, PhonesService],
+  providers: [CategoryService, PhonesService, CartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

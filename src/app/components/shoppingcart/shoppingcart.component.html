@@ -1,0 +1,53 @@
+<!--Banner-->
+<div class="banner">
+  <div class="banner-inner">
+    <span style="font-weight: bold;">Want to chat before you buy? We are here for you, just give us a call on
+      2363526845</span>
+    <i class="fa fa-times" id="x"></i>
+  </div>
+</div>
+
+<!-- Header -->
+<section class="box">
+  <h1>Your Cart</h1>
+</section>
+<!-- End -->
+
+<div class="wrapper">
+  <div class="container-fluid">
+    <div class="row" >
+      <h1>dkd</h1>
+
+      <!--Shopping Cart Starts-->
+      
+      <div class="cart-item" *ngFor="let item of items">
+        <span>{{ item.name }}</span>
+        <span>{{ item.minprice }}</span>
+        <p>kokuk</p>
+      </div>
+
+      <!--Shopping Cart Ends-->
+
+
+      <!--Summary Box starts-->
+      <div class="col summary p-5 bg-grey rounded shadow mb-5">
+
+        <div id="monthly">
+          <div class="pricetxt">Due Monthly</div>
+          <div class="price">299 kr</div>
+        </div>
+
+        <div class="vertical"></div>
+
+        <div id="today">
+          <div class="pricetxt">Due Today</div>
+          <div class="price">399 kr</div>
+        </div>
+
+        <button class="checkout_btn" routerLink="/checkout" routerLinkActive="active">Start Checkout</button>
+      </div>
+
+      <!--Summary Box Ends-->
+
+    </div>
+  </div>

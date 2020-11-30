@@ -16,8 +16,6 @@
         "operatingsystem": "Android 10.0 with One UI 2.1",
         "processor": "EXYNOS 850 Octa-core 2.0Ghz",
         "facialrecognition": "Yes"
-
-
       },
       "upfront": "200 kr upfront",
       "monthly": "140 kr/month (36 months)",
@@ -218,6 +216,16 @@
         "name": "Accessories"
       }
       
+    ], 
+
+    "shoppingcart":[
+      {
+        "cartid": "15",
+        "dateCreated": "19/02/2019",
+        ".read": true,
+        ".write": true
+
+      }
     ]
   
   }
