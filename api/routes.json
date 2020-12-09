@@ -1,4 +1,3 @@
 {
-    "/api/*": "/$1", 
-    "/:phones/:id/show": "/:phones/:id"
+    "/api/*": "/$1"
   }

@@ -1,10 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
-import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 import { PhonesService } from '../../services/phones.service';
 import { Phone } from '../../models//phone';
-import { CartService } from '../../services/cart.service';
+import { CartService } from 'src/app/services/cart.service';
+
 
 @Component({
   selector: 'app-productdetails',
@@ -16,24 +16,44 @@ export class ProductdetailsComponent implements OnInit {
   @Input('show-actions') showActions = true;
   phone : Phone;
 
+
+
   constructor(
               private route: ActivatedRoute, 
-              private phoneService: PhonesService,
-              private cartService : CartService) { }
+              private phonesService: PhonesService, 
+              private cartService: CartService){}
 
-
-              addToCart(phone:Phone){
-                
-
+              
+              
+           //Add item to the shopping cart
+              addItemToCart( id, quantity, price, name, img) : void {
+                let payload = {
+                  id: id,
+                  quantity: quantity,
+                  price: price, 
+                  name: name,
+                  img: img
+                };
+                this.cartService.addToCart(payload).subscribe(() => {
+                  this.phonesService.getPhone(id);
+                  alert('Product Added');
+                });
               }
+              
+
+            
 
    ngOnInit() : void {
  
    this.route.paramMap.pipe(
     switchMap((params: ParamMap) =>
-      this.phoneService.getPhone(+params.get('id'))
+      this.phonesService.getPhone(+params.get('id'))
       )
    ).subscribe(phone => this.phone = phone);
+
+
+ // this._getProducts();
+
 
   }
 

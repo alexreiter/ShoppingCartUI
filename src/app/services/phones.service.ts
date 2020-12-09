@@ -27,8 +27,8 @@ export class PhonesService {
       
   }
 
-/** GET phone by id. Will 404 if id not found */
-getPhone(id: number): Observable<Phone> {
+  /** GET phone by id. Will 404 if id not found */
+  getPhone(id: number): Observable<Phone> {
   const url = `${this.phoneUrl}/${id}`;
   return this.http.get<Phone>(url).pipe(
     catchError(this.handleError<Phone>(`getPhone id=${id}`))

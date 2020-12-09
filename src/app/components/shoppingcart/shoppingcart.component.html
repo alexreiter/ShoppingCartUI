@@ -13,20 +13,51 @@
 </section>
 <!-- End -->
 
-<div class="wrapper">
-  <div class="container-fluid">
-    <div class="row" >
-      <h1>dkd</h1>
+<div class="wrapper" >
+  <div class="container"  >
+  
+      <h1>Shopping cart</h1>
 
-      <!--Shopping Cart Starts-->
+      <section  >
+        <div class="spacer" >
+              <div class="col-lg-9"  >
+                <div class="container" >
+            <div class="row mt-5"  >
+                <div class="row shop-listing" >
+                <table class="table shop-table"  *ngIf = "carts">
+                    <tr>
+                      <th class="b-0">Product</th>
+                      <th class="b-0">Name</th>
+                      <th class="b-0">Price</th>
+                      <th class="b-0">Quantity</th>
+                      <th class="b-0 text-right">Total Price</th>
+                    </tr>
+                    <tr *ngFor= "let item of carts" >
+                      <td><img [src] = "item.img"></td>
+                      <td>{{item.name}}</td>
+                      <td>{{item.price | currency: 'DKK'}}</td>
+                      <td>
+                        <button class="btn btn-primary btn-sm" (click)="increment_quantity(item.id, item.quantity,item.name, item.price, item.img)" >+</button> 
+                      {{item.quantity}}                       
+                        <button class="btn btn-primary btn-sm" (click)="decrement_quantity(item.id, item.quantity,item.name, item.price, item.img)">-</button>
+                      </td>
+                     
+                      <button class="btn btn-danger" (click)="deleteItem(item.id)" >Remove</button>
+                    </tr>
+                    <tr>
+                      <td colspan="3" align="right"><b>Subtotal : {{SubtotalPrice()}}</b></td>
+                      <td colspan="4" align="right">
+                       
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       
-      <div class="cart-item" *ngFor="let item of items">
-        <span>{{ item.name }}</span>
-        <span>{{ item.minprice }}</span>
-        <p>kokuk</p>
-      </div>
-
-      <!--Shopping Cart Ends-->
 
 
       <!--Summary Box starts-->

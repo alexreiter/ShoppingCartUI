@@ -164,21 +164,23 @@
       <div class="dropdown">
       <li><a routerLink="/shoppingcart" routerLinkActive="active"><i class="fa fa-shopping-cart cart-icon"></i></a><span class="badge">3</span></li>
       <div class="dropdown-content">
-        <div class="cart">
+        <div class="cart"  *ngIf = "carts" >
         <div class="cart-header">
           <h1 id="carttext">Shopping Cart</h1>
         </div>
 
-        <ul class="shopping-cart-items" *ngFor="let shoppingcart of shoppingcarts">
+        <ul class="shopping-cart-items" *ngFor= "let item of carts">
           <li class="clearfix">
-            <img [src]="shoppingcart.img" alt="item1" />
-            <span class="item-name">{{shoppingcart.name}}</span>
+            <img  [src]="item.img" />
+            <span class="item-name">{{item.name}}</span>
             
-            <span class="item-quantity">{{shoppingcart.quantity}}</span>
+            <span class="item-quantity">{{item.quantity}}</span>
+            <span class="item-quantity">{{item.price}}</span>
+
             
             <i class="fa fa-trash" id="minicart_icon"></i>
             <i class="fa fa-heart" id="minicart_icon"></i>
-            <span class="item-price">{{shoppingcart.price}}</span>
+            <span class="item-price"></span>
           </li>
 
         </ul>

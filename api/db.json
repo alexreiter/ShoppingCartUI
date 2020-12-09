@@ -1,11 +1,17 @@
 {
-    "phones": [
-      {
+  "phones": [
+    {
       "id": 1,
       "brand": "Samsung",
-      "title" : "Galaxy A21s",
-      "memory": ["64GB" , "128GB" , "256GB"],
-      "specification":{
+      "title": "Galaxy A21s",
+      "name": "Samsung Galaxy A21s",
+      "quantity": 1,
+      "memory": [
+        "64GB",
+        "128GB",
+        "256GB"
+      ],
+      "specification": {
         "camera": "48MP",
         "chargingtime": "Fast-charge capable",
         "weight": "191g",
@@ -19,16 +25,18 @@
       },
       "upfront": "200 kr upfront",
       "monthly": "140 kr/month (36 months)",
-      "minprice": "minimum price 6560 kr",
+      "price": 6560,
       "color": "red, blue, black, grey",
-       "img": "../assets/img/samsung.png", 
-       "category": 1
+      "img": "../assets/img/samsung.png",
+      "category": 1
     },
     {
       "id": 2,
       "brand": "Samsung",
-      "title" : "Galaxy S20 FE",
-      "specification":{
+      "title": "Galaxy S20 FE",
+      "name": "Samsung Galaxy S20 FE",
+      "quantity": 1,
+      "specification": {
         "camera": "32MP",
         "chargingtime": "Fast-charge capable",
         "weight": "190g",
@@ -39,22 +47,22 @@
         "operatingsystem": "Android 10.0 with One UI 2.5",
         "processor": "Exynos 990 (up to 2.75GHz)",
         "facialrecognition": "Yes"
-
-
       },
       "upfront": "175 kr upfront",
       "monthly": "155 kr/month (36 months)",
-      "minprice": "minimum price 6860 kr",
+      "price": 6560,
       "color": "bronze, blue, black, grey",
       "DetailButtonText": "Read More",
-      "img": "../assets/img/GalaxyS20.png", 
+      "img": "../assets/img/GalaxyS20.png",
       "category": 1
-    }, 
+    },
     {
       "id": 3,
       "brand": "Apple",
       "title": "iPhone 11",
-      "specification":{
+      "name": "Apple iPhone 11",
+      "quantity": 1,
+      "specification": {
         "camera": "12MP",
         "chargingtime": "Fast-charge capable",
         "weight": "194g",
@@ -65,12 +73,10 @@
         "operatingsystem": "iOS 13",
         "processor": "A13 Bionic",
         "facialrecognition": "Yes"
-
-
       },
       "upfront": "200 kr upfront",
       "monthly": "155 kr/month (36 months)",
-      "minprice": "minimum price 6860 kr",
+      "price": 6560,
       "color": "bronze, blue, black, grey",
       "DetailButtonText": "Read More",
       "img": "../assets/img/iphone11.png"
@@ -78,8 +84,10 @@
     {
       "id": 4,
       "brand": "Huawei",
-      "title" : "Nova 5T",
-      "specification":{
+      "title": "Nova 5T",
+      "name": "Huawei Nova 5T",
+      "quantity": 1,
+      "specification": {
         "camera": "48MP",
         "chargingtime": "Fast-charge capable",
         "weight": "174g",
@@ -90,12 +98,10 @@
         "operatingsystem": "Android 9",
         "processor": "Huawei Kirin 980",
         "facialrecognition": "Yes"
-
-
       },
       "upfront": "100 kr upfront",
       "monthly": "145 kr/month (36 months)",
-      "minprice": "minimum price 6500 kr",
+      "price": 6560,
       "color": "bronze, blue, black, grey",
       "DetailButtonText": "Read More",
       "img": "../assets/img/nova5.png"
@@ -103,8 +109,10 @@
     {
       "id": 5,
       "brand": "Apple",
-      "title" : "iPhone 12",
-      "specification":{
+      "title": "iPhone 12",
+      "name": "Apple iPhone 12",
+      "quantity": 1,
+      "specification": {
         "camera": "12MP",
         "chargingtime": "Fast-charge capable",
         "weight": "162g",
@@ -115,12 +123,10 @@
         "operatingsystem": "iOS 14",
         "processor": "A14 Bionic",
         "facialrecognition": "Yes"
-
-
       },
       "upfront": "175 kr upfront",
       "monthly": "165 kr/month (36 months)",
-      "minprice": "minimum price 6460 kr",
+      "price": 6560,
       "color": "bronze, blue, black, grey",
       "DetailButtonText": "Read More",
       "img": "../assets/img/iphone12.png"
@@ -128,8 +134,10 @@
     {
       "id": 6,
       "brand": "Samsung",
-      "title" : "Galaxy S10",
-      "specification":{
+      "title": "Galaxy S10",
+      "name": "Samsung Galaxy S10",
+      "quantity": 1,
+      "specification": {
         "camera": "16MP",
         "chargingtime": "Fast-charge capable",
         "weight": "198g",
@@ -140,12 +148,10 @@
         "operatingsystem": "Android 9",
         "processor": "Exynos 9820",
         "facialrecognition": "Yes"
-
-
       },
       "upfront": "250 kr upfront",
       "monthly": "185 kr/month (36 months)",
-      "minprice": "minimum price 6600 kr",
+      "price": 6560,
       "color": "bronze, blue, black, grey",
       "DetailButtonText": "Read More",
       "img": "../assets/img/galaxyS10png.png"
@@ -153,9 +159,11 @@
     {
       "id": 7,
       "brand": "Samsung",
-      "title" : "Galaxy Note 20",
+      "title": "Galaxy Note 20",
+      "name": "Samsung Galaxy Nore 20",
       "upfront": "225 kr upfront",
-      "specification":{
+      "quantity": 1,
+      "specification": {
         "camera": "64MP",
         "chargingtime": "Fast-charge capable",
         "weight": "198g",
@@ -168,7 +176,7 @@
         "facialrecognition": "Yes"
       },
       "monthly": "150 kr/month (36 months)",
-      "minprice": "minimum price 7560 kr",
+      "price": 6560,
       "color": "bronze, blue, black, grey",
       "DetailButtonText": "Read More",
       "img": "../assets/img/galaxynote20.png"
@@ -176,8 +184,10 @@
     {
       "id": 8,
       "brand": "Huawei",
-      "title" : "P30 Pro",
-      "specification":{
+      "title": "P30 Pro",
+      "name": "Huawei P30 Pro",
+      "quantity": 1,
+      "specification": {
         "camera": "40MP",
         "chargingtime": "Fast-charge capable",
         "weight": "192g",
@@ -191,41 +201,44 @@
       },
       "upfront": "200 kr upfront",
       "monthly": "185 kr/month (36 months)",
-      "minprice": "minimum price 6580 kr",
+      "price": 6560,
       "color": "bronze, blue, black, grey",
       "DetailButtonText": "Read More",
       "img": "../assets/img/p30pro.png"
     }
-    ],
-  
-    "categories":[
-      {
-        "category_id": 1,
-        "name": "Phones"
-      },
-      {
-        "category_id": 2,
-        "name": "Tablets"
-      },
-      {
-        "category_id": 3,
-        "name": "Smart Watches"
-      }, 
-      {
-        "category_id": 4,
-        "name": "Accessories"
-      }
-      
-    ], 
-
-    "shoppingcart":[
-      {
-        "cartid": "15",
-        "dateCreated": "19/02/2019",
-        ".read": true,
-        ".write": true
-
-      }
-    ]
-  
-  }
+  ],
+  "categories": [
+    {
+      "category_id": 1,
+      "name": "Phones"
+    },
+    {
+      "category_id": 2,
+      "name": "Tablets"
+    },
+    {
+      "category_id": 3,
+      "name": "Smart Watches"
+    },
+    {
+      "category_id": 4,
+      "name": "Accessories"
+    }
+  ],
+  "shoppingcart": [
+    {
+      "id": 2,
+      "quantity": 4,
+      "name": "Samsung Galaxy S20 FE",
+      "price": 6560,
+      "img": "../assets/img/GalaxyS20.png"
+    },
+    {
+      "id": 7,
+      "quantity": 1,
+      "price": 6560,
+      "name": "Samsung Galaxy Nore 20",
+      "img": "../assets/img/galaxynote20.png"
+    }
+  ]
+}
