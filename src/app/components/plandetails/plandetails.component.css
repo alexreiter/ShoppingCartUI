@@ -1,0 +1,14 @@
+.container {
+  width: 80%;
+  background-color: palegreen;
+}
+
+img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.content {
+  clip-path: circle(87% at 50% 100%);
+}

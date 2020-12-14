@@ -243,15 +243,26 @@
   ], 
   "plan":[
     {
-      "planid": 1,
-      "planname": "Demotel All in One"
-      
-    },
-    {
-      "planid": 2,
-      "planname": "Quadruple Play"
+      "id": 1,
+      "name": "Demotel All in One",
+      "linespeed": [
+        {
+          "value": "50/50 Mbit/s"
+        }, 
+        {
+          "value": "100/100 Mbit/s"
+        }, 
+        {
+          "value": "300/300 Mbit/s"
+        }, 
+        {
+          "value": "500/500 Mbit/s"
+        }
+
+      ]
       
     }
+   
   ]
 }
 

@@ -8,7 +8,7 @@ import { ShoppingcartComponent } from './components/shoppingcart/shoppingcart.co
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { OrderSuccessComponent } from './components/order-success/order-success.component';
 import { ProductdetailsComponent } from './components/productdetails/productdetails.component';
-import { PlandetailsComponent } from './plandetails/plandetails.component';
+import { PlandetailsComponent } from './components/plandetails/plandetails.component';
 
 const routes: Routes = [
   {path: 'shop', component: ShopComponent}, 
@@ -39,5 +39,5 @@ export const routingComponents = [
   CheckoutComponent, 
   OrderSuccessComponent, 
   ProductdetailsComponent,
-  PlandetailsComponent,
+  PlandetailsComponent
 ]

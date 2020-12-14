@@ -27,7 +27,10 @@ import { CategoryService } from './services/category.service';
 import { PhonesService } from './services/phones.service';
 import { CartService } from './services/cart.service';
 import { ProductdetailsComponent } from './components/productdetails/productdetails.component';
-import { PlandetailsComponent } from './plandetails/plandetails.component';
+import { PlandetailsComponent } from './components/plandetails/plandetails.component';
+import { PlanService } from './services/plan.service';
+import {MatExpansionModule} from '@angular/material/expansion';
+
 
 
 
@@ -46,7 +49,7 @@ import { PlandetailsComponent } from './plandetails/plandetails.component';
     CheckoutComponent,
     OrderSuccessComponent,
     ProductdetailsComponent,
-    PlandetailsComponent,
+    PlandetailsComponent
     
   ],
   
@@ -63,10 +66,11 @@ import { PlandetailsComponent } from './plandetails/plandetails.component';
     MatStepperModule, 
     MatFormFieldModule,
     MatInputModule, 
-    HttpClientModule
+    HttpClientModule, 
+    MatExpansionModule,
     
   ],
-  providers: [CategoryService, PhonesService, CartService],
+  providers: [CategoryService, PhonesService, CartService, PlanService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
