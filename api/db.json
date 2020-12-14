@@ -240,5 +240,18 @@
       "name": "Samsung Galaxy Nore 20",
       "img": "../assets/img/galaxynote20.png"
     }
+  ], 
+  "plan":[
+    {
+      "planid": 1,
+      "planname": "Demotel All in One"
+      
+    },
+    {
+      "planid": 2,
+      "planname": "Quadruple Play"
+      
+    }
   ]
 }
+

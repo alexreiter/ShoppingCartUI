@@ -26,7 +26,7 @@ img {
   position: relative;
 }
 
-h1 {
+#subscription {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: whitesmoke;
   text-align: center;
@@ -52,23 +52,34 @@ article {
 }
 
 .text {
-  background: linear-gradient(
-    0deg,
-    rgba(215, 227, 250, 1) 0%,
-    rgba(100, 149, 237, 1) 100%
-  );
+  background: white;
   height: 450px;
+  box-shadow: 1px 1px 2px white, 0 0 25px lightgray, 0 0 5px #aaaaaa;
+  position: relative;
 }
 .image {
   height: 450px;
   object-fit: cover;
 }
-.text:nth-of-type(3) {
-  background: linear-gradient(
-    0deg,
-    rgba(215, 227, 250, 1) 0%,
-    rgba(100, 149, 237, 1) 100%
-  );
+
+#plantxt {
+  font-family: "Fredoka One", cursive;
+  font-size: 1.75rem;
+  color: #001774;
+}
+
+.demo_btn,
+.quad_btn {
+  background-color: white;
+  color: #2a7de1;
+  border-color: white;
+  border-radius: 5px;
+  width: 200px;
+  height: 50px;
+  position: absolute;
+  bottom: 10%;
+  left: 40%;
+  font-weight: 500;
 }
 
 @media screen and (min-width: 1025px) {

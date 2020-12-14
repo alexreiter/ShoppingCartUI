@@ -27,6 +27,7 @@ import { CategoryService } from './services/category.service';
 import { PhonesService } from './services/phones.service';
 import { CartService } from './services/cart.service';
 import { ProductdetailsComponent } from './components/productdetails/productdetails.component';
+import { PlandetailsComponent } from './plandetails/plandetails.component';
 
 
 
@@ -45,6 +46,7 @@ import { ProductdetailsComponent } from './components/productdetails/productdeta
     CheckoutComponent,
     OrderSuccessComponent,
     ProductdetailsComponent,
+    PlandetailsComponent,
     
   ],
   
