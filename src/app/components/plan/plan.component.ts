@@ -11,8 +11,11 @@ import { PlanService } from 'src/app/services/plan.service';
 export class PlanComponent implements OnInit {
 
   plan$ : any = [];
-  linespeed: string;
- 
+  radioSel:any;
+  radioSelected:string;
+  radioSelectedString:string; 
+
+
 
   @ViewChild(MatAccordion) accordion: MatAccordion;
  
@@ -21,9 +24,18 @@ export class PlanComponent implements OnInit {
    constructor(private route: ActivatedRoute,
      private router: Router,
      private planService: PlanService) { 
+      this.getSelecteditem();
      }
  
-    
+     getSelecteditem(){
+      this.radioSel = this.plan$.find(plan => plan.value === this.radioSelected);
+      //this.radioSelectedString = JSON.stringify(this.radioSel);
+    }
+
+    onItemChange(plan$){
+      this.getSelecteditem();
+      console.log("radioSelected = ", this.radioSelected)
+    }
     
  
     

@@ -13,41 +13,32 @@
                 <div class="row">
                   
                     <div class="col-sm-6">
-                      
                       <label>
-                        <input type="radio" name="product" class="card-input-element" />
-              
+                        <input type="radio" name="internet" class="card-input-element" [(ngModel)]="radioSelected" value="{{plan.linespeed[0].name}}" (change)="onItemChange(plan.linespeed.name)"/>
                           <div class="card panel-default card-input">
                             <div class="row">
-
-                              <div class="col-auto">
-                                <div class="card-title">{{plan.linespeed[0].name}}</div>
-                              </div>
+                              <div class="col-auto"><div class="card-title">{{plan.linespeed[0].name}}</div></div>
                              <div class="col-auto ml-auto">
                               <div class="card-title">{{plan.linespeed[0].price}}<span>&#44;</span><span>&#45;</span><span>&#47;</span>md</div>
                             </div>
                             </div>
                            
                             <div class="divider"></div>
-                            <div class="card-subtitle">
-                              {{plan.linespeed[0].speed}}
-                            </div>
+                            <div class="card-subtitle">{{plan.linespeed[0].speed}}</div>
                             <ul>
                               <li>No set-up fee</li>
                               <li>No binding</li>
-
                             </ul>
                           </div>
-              
                       </label>
-                      
                     </div>
 
 
+                  
                     <div class="col-sm-6">
                       
                       <label>
-                        <input type="radio" name="product" class="card-input-element" />
+                        <input type="radio" name="internet" class="card-input-element" [(ngModel)]="radioSelected" value="{{plan.linespeed[1].name}}" (change)="onItemChange(plan.linespeed.name)"/>
               
                           <div class="card panel-default card-input">
                             <div class="row">
@@ -78,7 +69,7 @@
                     <div class="col-sm-6">
                       
                       <label>
-                        <input type="radio" name="product" class="card-input-element" />
+                        <input type="radio" name="internet" class="card-input-element" [(ngModel)]="radioSelected" value="{{plan.linespeed[2].name}}" (change)="onItemChange(plan.linespeed.name)"/>
               
                           <div class="card panel-default card-input">
                             <div class="row">
@@ -109,7 +100,7 @@
                     <div class="col-sm-6">
                       
                       <label>
-                        <input type="radio" name="product" class="card-input-element" />
+                        <input type="radio" name="internet" class="card-input-element" [(ngModel)]="radioSelected" value="{{plan.linespeed[3].name}}" (change)="onItemChange(plan.linespeed.name)"/>
               
                           <div class="card panel-default card-input">
                             <div class="row">
@@ -134,12 +125,265 @@
                           </div>
               
                       </label>
+
+                      <h1> You have selected: <b>{{radioSelected}}</b></h1>
+                    </div>
+                
+                  </div>
+
+
+                    <div *ngIf="radioSelected">
                       
+                  
+                      <div>
+
+                        <h1>Would You like to add IP-TV to your package?</h1>
+                        <input type="radio" name="tv" value="yes" [(ngModel)]="tvchoice" ><label>Yes, I'd love to </label>
+                        <input type="radio" name="tv" value="no" [(ngModel)]="tvchoice"><label>No, thanks, I'm fine</label>
+
+                        <div *ngIf="tvchoice == 'yes'">
+
+                        <h2>Select a TV-package: </h2>
+
+                        <div class="row">
+
+                          <div class="col-sm-6">
+                      
+                            <label>
+                              <input type="radio" name="tvpackage" class="card-input-element" [(ngModel)]="radioSelected" value="{{plan.tvpackage[0].name}}" (change)="onItemChange(plan)"/>
+                    
+                                <div class="card panel-default card-input">
+                                  <div class="row">
+      
+                                    <div class="col-auto">
+                                      <div class="card-title">{{plan.tvpackage[0].name}}</div>
+                                    </div>
+                                   <div class="col-auto ml-auto">
+                                    <div class="card-title">{{plan.tvpackage[0].price}}<span>&#44;</span><span>&#45;</span><span>&#47;</span>md</div>
+                                  </div>
+                                  </div>
+                                 
+                                  <div class="divider"></div>
+                                
+                                  <ul>
+                                    <li>No set-up fee</li>
+                                    <li>No binding</li>
+      
+                                  </ul>
+                                </div>
+                    
+                            </label>
+                            
+                          </div>
+
+                          <div class="col-sm-6">
+                      
+                            <label>
+                              <input type="radio" name="tvpackage" class="card-input-element" [(ngModel)]="radioSelected" value="{{plan.tvpackage[1].name}}" (change)="onItemChange(plan)"/>
+                    
+                                <div class="card panel-default card-input">
+                                  <div class="row">
+      
+                                    <div class="col-auto">
+                                      <div class="card-title">{{plan.tvpackage[1].name}}</div>
+                                    </div>
+                                   <div class="col-auto ml-auto">
+                                    <div class="card-title">{{plan.tvpackage[1].price}}<span>&#44;</span><span>&#45;</span><span>&#47;</span>md</div>
+                                  </div>
+                                  </div>
+                                 
+                                  <div class="divider"></div>
+                                 
+                                  <ul>
+                                    <li>No set-up fee</li>
+                                    <li>No binding</li>
+      
+                                  </ul>
+                                </div>
+                    
+                            </label>
+                            
+                          </div>
+
+
+                        </div>
+
+                      </div>
+                      </div>
+                    
+                    </div>
+                   
+                    <div *ngIf="radioSelected">
+
+                      <h1>You can add more options if you'd like:</h1>
+                      <div class="row">
+
+                        <div class="col-sm-6">
+                      
+                          <label>
+                            <input type="radio" name="tvpackage" class="card-input-element" [(ngModel)]="radioSelected" value="{{plan.tvoption[0].name}}" (change)="onItemChange(plan)"/>
+                  
+                              <div class="card panel-default card-input">
+                                <div class="row">
+    
+                                  <div class="col-auto">
+                                    <div class="card-title">{{plan.tvoption[0].name}}</div>
+                                  </div>
+                                 <div class="col-auto ml-auto">
+                                  <div class="card-title">{{plan.tvoption[0].price}}<span>&#44;</span><span>&#45;</span><span>&#47;</span>md</div>
+                                </div>
+                                </div>
+                               
+                                <div class="divider"></div>
+                               
+                                <ul>
+                                  <li>No set-up fee</li>
+                                  <li>No binding</li>
+    
+                                </ul>
+                              </div>
+                  
+                          </label>
+                          
+                        </div>
+
+                        <div class="col-sm-6">
+                      
+                          <label>
+                            <input type="radio" name="tvpackage" class="card-input-element" [(ngModel)]="radioSelected" value="{{plan.tvoption[1].name}}" (change)="onItemChange(plan)"/>
+                  
+                              <div class="card panel-default card-input">
+                                <div class="row">
+    
+                                  <div class="col-auto">
+                                    <div class="card-title">{{plan.tvoption[1].name}}</div>
+                                  </div>
+                                 <div class="col-auto ml-auto">
+                                  <div class="card-title">{{plan.tvoption[1].price}}<span>&#44;</span><span>&#45;</span><span>&#47;</span>md</div>
+                                </div>
+                                </div>
+                               
+                                <div class="divider"></div>
+                          
+                                <ul>
+                                  <li>No set-up fee</li>
+                                  <li>No binding</li>
+    
+                                </ul>
+                              </div>
+                  
+                          </label>
+                          
+                        </div>
+                      </div>
+
                     </div>
 
+                    <div *ngIf="radioSelected">
+
+                      <h1>How about an IP-Telephony package?</h1>
+
+                      <div class="row">
+
+                        <div class="col-sm-4">
+                      
+                          <label>
+                            <input type="radio" name="iptelephony" class="card-input-element" [(ngModel)]="radioSelected" value="{{plan.iptelephony[0].name}}" (change)="onItemChange(plan)"/>
+                  
+                              <div class="card panel-default card-input">
+                                <div class="row">
+    
+                                  <div class="col-auto">
+                                    <div class="card-title">{{plan.iptelephony[0].name}}</div>
+                                  </div>
+                                 <div class="col-auto ml-auto">
+                                  <div class="card-title">{{plan.iptelephony[0].price}}<span>&#44;</span><span>&#45;</span><span>&#47;</span>md</div>
+                                </div>
+                                </div>
+                               
+                                <div class="divider"></div>
+                               
+                                <ul>
+                                  <li>No set-up fee</li>
+                                  <li>No binding</li>
+    
+                                </ul>
+                              </div>
+                  
+                          </label>
+                          
+                        </div>
+
+                        <div class="col-sm-4">
+                      
+                          <label>
+                            <input type="radio" name="tvpackage" class="card-input-element" [(ngModel)]="radioSelected" value="{{plan.iptelephony[1].name}}" (change)="onItemChange(plan)"/>
+                  
+                              <div class="card panel-default card-input">
+                                <div class="row">
+    
+                                  <div class="col-auto">
+                                    <div class="card-title">{{plan.iptelephony[1].name}}</div>
+                                  </div>
+                                 <div class="col-auto ml-auto">
+                                  <div class="card-title">{{plan.iptelephony[1].price}}<span>&#44;</span><span>&#45;</span><span>&#47;</span>md</div>
+                                </div>
+                                </div>
+                               
+                                <div class="divider"></div>
+  
+                                <ul>
+                                  <li>No set-up fee</li>
+                                  <li>No binding</li>
+    
+                                </ul>
+                              </div>
+                  
+                          </label>
+                          
+                        </div>
 
 
-                </div>
+                        <div class="col-sm-4">
+                      
+                          <label>
+                            <input type="radio" name="tvpackage" class="card-input-element" [(ngModel)]="radioSelected" value="{{plan.iptelephony[2].name}}" (change)="onItemChange(plan)"/>
+                  
+                              <div class="card panel-default card-input">
+                                <div class="row">
+    
+                                  <div class="col-auto">
+                                    <div class="card-title">{{plan.iptelephony[2].name}}</div>
+                                  </div>
+                                 <div class="col-auto ml-auto">
+                                  <div class="card-title">{{plan.iptelephony[2].price}}<span>&#44;</span><span>&#45;</span><span>&#47;</span>md</div>
+                                </div>
+                                </div>
+                               
+                                <div class="divider"></div>
+                              
+                                <ul>
+                                  <li>No set-up fee</li>
+                                  <li>No binding</li>
+    
+                                </ul>
+                              </div>
+                  
+                          </label>
+                          
+                        </div>
+
+
+                      </div>
+
+                      <div>
+
+                        <h1>Shop other products, see our latest deals here</h1>
+                        <button>Go to the shop</button>
+                      </div>
+
+
+                    </div>
                 
 
           

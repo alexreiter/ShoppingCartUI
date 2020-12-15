@@ -30,6 +30,8 @@ import { ProductdetailsComponent } from './components/productdetails/productdeta
 import { PlanService } from './services/plan.service';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { PlanComponent} from './components/plan/plan.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+
 
 
 
@@ -68,6 +70,8 @@ import { PlanComponent} from './components/plan/plan.component';
     MatInputModule, 
     HttpClientModule, 
     MatExpansionModule,
+    ReactiveFormsModule, 
+    FormsModule
     
   ],
   providers: [CategoryService, PhonesService, CartService, PlanService],

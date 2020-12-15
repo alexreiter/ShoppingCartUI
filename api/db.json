@@ -270,7 +270,52 @@
 
         }
 
+      ], 
+      "tvpackage": [
+        {
+          "name": "Big TV Package",
+          "price": 149
+        }, 
+        {
+          "name": "Small TV Package",
+          "price": 199
+
+        }
+
+      ],
+      "tvoption": [
+        {
+          "name": "Sport TV Package",
+          "price": 149
+        }, 
+        {
+          "name": "Movie TV Package",
+          "price": 199
+
+        }
+
+      ], 
+      "iptelephony": [
+        
+        {
+          "name": "No Flatrate",
+          "price": 149
+        }, 
+        {
+          "name": "Fixed Net Flatrate",
+          "price": 199
+
+        },
+        {
+          "name": "Fixed Net and Mobile Flatrate",
+          "price": 249
+
+        }
+
       ]
+
+
+
       
     }
    
