@@ -27,9 +27,9 @@ import { CategoryService } from './services/category.service';
 import { PhonesService } from './services/phones.service';
 import { CartService } from './services/cart.service';
 import { ProductdetailsComponent } from './components/productdetails/productdetails.component';
-import { PlandetailsComponent } from './components/plandetails/plandetails.component';
 import { PlanService } from './services/plan.service';
 import {MatExpansionModule} from '@angular/material/expansion';
+import { PlanComponent} from './components/plan/plan.component';
 
 
 
@@ -49,7 +49,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
     CheckoutComponent,
     OrderSuccessComponent,
     ProductdetailsComponent,
-    PlandetailsComponent
+    PlanComponent
     
   ],
   

@@ -247,16 +247,27 @@
       "name": "Demotel All in One",
       "linespeed": [
         {
-          "value": "50/50 Mbit/s"
+          "name": "Basic Plan",
+          "speed": "50/50 Mbit/s",
+          "price": 149
         }, 
         {
-          "value": "100/100 Mbit/s"
+          "name": "Essential Plan",
+          "speed": "100/100 Mbit/s", 
+          "price": 199
+
         }, 
         {
-          "value": "300/300 Mbit/s"
+          "name": "Smart Plan",
+          "speed": "300/300 Mbit/s",
+          "price": 219
+
         }, 
         {
-          "value": "500/500 Mbit/s"
+          "name": "Deluxe Plan",
+          "speed": "500/500 Mbit/s",
+          "price": 249
+
         }
 
       ]
