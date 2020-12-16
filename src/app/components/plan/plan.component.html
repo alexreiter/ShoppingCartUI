@@ -10,10 +10,10 @@
         <div class="col-9">
             <form>
 
-          <div class="row" >
+          <div class="row">
               <div class="col-md-6" *ngFor="let item of plan.linespeed; let i = index;">
                 <label>
-                  <input type="radio" name="internet" class="card-input-element" [(ngModel)]="radioSelected" value="{{plan.linespeed[i].name}}" (change)="onItemChange(plan.linespeed.name)"/>
+                  <input type="radio" name="internet" class="card-input-element" id="net" [(ngModel)]="radioSelected" value="{{plan.linespeed[i].price}}" (change)="onItemChange()" />
                     <div class="card panel-default card-input">
                       <div class="row">
                         <div class="col-auto"><div class="card-title">{{plan.linespeed[i].name}}</div></div>
@@ -33,22 +33,10 @@
               </div>
 
             </div>
-
-        
-
-                      <h1> You have selected: <b>{{radioSelected}}</b></h1>
                   
-                
-                  
-              
-
-
-
+  
                     <div *ngIf="radioSelected">
                       
-                  
-                      <div>
-
                         <h1>Would You like to add IP-TV to your package?</h1>
                         <input type="radio" name="tv" value="yes" [(ngModel)]="tvchoice" ><label>Yes, I'd love to </label>
                         <input type="radio" name="tv" value="no" [(ngModel)]="tvchoice"><label>No, thanks, I'm fine</label>
@@ -62,7 +50,7 @@
                           <div class="col-sm-6" *ngFor="let item of plan.tvpackage; let i = index;">
                       
                             <label>
-                              <input type="radio" name="tvpackage" class="card-input-element" [(ngModel)]="radioSelected" value="{{plan.tvpackage[i].name}}" (change)="onItemChange(plan)"/>
+                              <input type="radio" name="tvpackage" class="card-input-element" [(ngModel)]="tvSelected" value="{{plan.tvpackage[i].price}}" (change)="onTvChange()"/>
                     
                                 <div class="card panel-default card-input">
                                   <div class="row">
@@ -90,12 +78,10 @@
 
                         </div>
 
-                      </div>
-                      </div>
-                    
+                      </div>                    
                     </div>
                    
-                    <div *ngIf="radioSelected">
+                    <div *ngIf="tvSelected">
 
                       <h1>You can add more options if you'd like:</h1>
                       <div class="row">
@@ -103,7 +89,7 @@
                         <div class="col-sm-6" *ngFor="let item of plan.tvoption; let i = index;">
                       
                           <label>
-                            <input type="radio" name="tvoption" class="card-input-element" [(ngModel)]="radioSelected" value="{{plan.tvoption[i].name}}" (change)="onItemChange(plan)"/>
+                            <input type="radio" name="tvoption" class="card-input-element" [(ngModel)]="tvOptionSelected" value="{{plan.tvoption[i].price}}" (change)="onOptionChange()"/>
                   
                               <div class="card panel-default card-input">
                                 <div class="row">
@@ -134,16 +120,20 @@
 
                     </div>
 
-                    <div *ngIf="radioSelected">
+                    <div *ngIf="(tvSelected || tvOptionSelected) || tvchoice=='no' ">
 
                       <h1>How about an IP-Telephony package?</h1>
+                      <input type="radio" name="telephon" value="yes" [(ngModel)]="telchoice" ><label>Yes, I'd love to </label>
+                      <input type="radio" name="telephon" value="no" [(ngModel)]="telchoice"><label>No, thanks, I'm fine</label>
+
+                      <div *ngIf="telchoice == 'yes'">
 
                       <div class="row">
 
                         <div class="col-sm-4" *ngFor="let item of plan.iptelephony; let i = index;">
                       
                           <label>
-                            <input type="radio" name="iptelephony" class="card-input-element" [(ngModel)]="radioSelected" value="{{plan.iptelephony[i].name}}" (change)="onItemChange(plan)"/>
+                            <input type="radio" name="iptelephony" class="card-input-element" [(ngModel)]="ipSelected" value="{{plan.iptelephony[i].price}}" (change)="onIpChange()"/>
                   
                               <div class="card panel-default card-input">
                                 <div class="row">
@@ -171,16 +161,17 @@
 
 
                       </div>
-
-                      <div>
-
-                        <h1>Shop other products, see our latest deals here</h1>
-                        <button routerLink="/shop" routerLinkActive="active">Go to the shop</button>
                       </div>
 
+                    
 
                     </div>
                 
+                    <div *ngIf="ipSelected || telchoice=='no'">
+
+                      <h1>Shop other products, see our latest deals here</h1>
+                      <button routerLink="/shop" routerLinkActive="active">Go to the shop</button>
+                    </div>
 
           
             </form>
@@ -189,6 +180,62 @@
           <div class="col-3">
 
             <h1>Shopping Cart</h1>
+
+            <div class="row">
+              <div class="col-sm-6">
+
+                <h4>Internet Plan:</h4>
+              </div>
+              <div class="col-sm-6">
+
+                <p>{{radioSelected}}</p>
+              
+              </div>
+
+              <div class="col-sm-6">
+
+                <h4>Tv Package:</h4>
+              </div>
+              <div class="col-sm-6">
+
+                <p>{{tvSelected}}</p>
+              
+              </div>
+
+              <div class="col-sm-6">
+
+                <h4>Optional TV:</h4>
+              </div>
+              <div class="col-sm-6">
+
+                <p>{{tvOptionSelected}}</p>
+              
+              </div>
+
+              <div class="col-sm-6">
+
+                <h4>IP-Telephony Plan:</h4>
+              </div>
+              <div class="col-sm-6">
+
+                <p>{{ipSelected}}</p>
+              
+              </div>
+
+              <div class="col-sm-6">
+
+                <h4>Total Price:</h4>
+              </div>
+              <div class="col-sm-6">
+
+                <p>{{calcTotalPrice()}}</p>
+              
+              </div>
+
+              <button>Add to Cart</button>
+
+            </div>
+           
           </div>
           </div>  
 </div>    

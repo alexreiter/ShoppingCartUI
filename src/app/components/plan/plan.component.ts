@@ -13,7 +13,12 @@ export class PlanComponent implements OnInit {
   plan$ : any = [];
   radioSel:any;
   radioSelected:string;
-  radioSelectedString:string; 
+  tvSelected:string; 
+  tvSel: any;
+  optionSel: any; 
+  tvOptionSelected: string;
+  ipSel: any;
+  ipSelected: string;
 
 
 
@@ -24,23 +29,65 @@ export class PlanComponent implements OnInit {
    constructor(private route: ActivatedRoute,
      private router: Router,
      private planService: PlanService) { 
-      this.getSelecteditem();
+      //this.getSelecteditem();
      }
+ 
  
      getSelecteditem(){
       this.radioSel = this.plan$.find(plan => plan.value === this.radioSelected);
-      //this.radioSelectedString = JSON.stringify(this.radioSel);
     }
 
-    onItemChange(plan$){
+    getSelectedTv(){
+      
+      this.tvSel = this.plan$.find(plan => plan.value === this.tvSelected);
+    }
+
+    getSelectedTvOption(){
+      
+      this.optionSel = this.plan$.find(plan => plan.value === this.tvOptionSelected);
+    }
+
+    getSelectedIp(){
+      
+      this.ipSel = this.plan$.find(plan => plan.value === this.ipSelected);
+    }
+    onItemChange(){
       this.getSelecteditem();
-      console.log("radioSelected = ", this.radioSelected)
+      console.log("radioSelected = ", this.radioSelected);
     }
+
+    onTvChange(){
+      this.getSelectedTv();
+      console.log("tvSelected = ", this.tvSelected);
+    }
+
+    onOptionChange(){
+      this.getSelectedTvOption();
+      console.log("tvOptionSelected = ", this.tvOptionSelected);
+    }
+
+    onIpChange(){
+      this.getSelectedIp();
+      console.log("ipSelected = ", this.ipSelected);
+    }
+
+    public calcTotalPrice(){
+    let sum = 0;
     
- 
+    /*
+       sum += (+this.radioSelected) + (+this.tvSelected) + (+this.tvOptionSelected) + (+this.ipSelected);
+      return sum;
+      */
+
+     }
+
     
 
-  ngOnInit(): void {
+    
+
+
+
+    ngOnInit() : void {
 
         /*
     this.plan$ = this.route.paramMap.pipe(
@@ -52,5 +99,6 @@ export class PlanComponent implements OnInit {
 
      this.planService.getPlan(parseInt(('id'))).subscribe(res=>this.plan$=res);
   }
+
 
 }

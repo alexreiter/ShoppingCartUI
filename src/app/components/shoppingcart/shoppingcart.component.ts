@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Observable } from 'rxjs/internal/Observable';
 import { switchMap } from 'rxjs/operators';
-import { CartItem } from 'src/app/models/cart-item.';
+import { CartItem } from 'src/app/models/cart-item';
 import { Phone } from 'src/app/models/phone';
 import { CartService } from '../../services/cart.service';
 import { PhonesService } from '../../services/phones.service';
@@ -70,6 +70,7 @@ total: number;
       let sum = 0;
       for (let id in this.carts)
       sum += this.carts[id].price * this.carts[id].quantity;
+      console.log("sum = ", sum)
       return sum;
      }
 

@@ -247,50 +247,72 @@
       "name": "Demotel All in One",
       "linespeed": [
         {
+          "id": 1,
           "name": "Basic Plan",
           "speed": "50/50 Mbit/s",
-          "price": 149
+          "price": 149, 
+          "quantity": 1
         }, 
         {
           "name": "Essential Plan",
           "speed": "100/100 Mbit/s", 
-          "price": 199
+          "price": 199, 
+          "quantity": 1
+
 
         }, 
         {
+          "id": 2,
           "name": "Smart Plan",
           "speed": "300/300 Mbit/s",
-          "price": 219
+          "price": 219, 
+          "quantity": 1
+
 
         }, 
         {
+          "id": 3,
           "name": "Deluxe Plan",
           "speed": "500/500 Mbit/s",
-          "price": 249
+          "price": 249, 
+          "quantity": 1
+
 
         }
 
       ], 
       "tvpackage": [
         {
+          "id": 1,
           "name": "Big TV Package",
-          "price": 149
+          "price": 149, 
+          "quantity": 1
+
         }, 
         {
+          "id": 2,
           "name": "Small TV Package",
-          "price": 199
+          "price": 199, 
+          "quantity": 1
+
 
         }
 
       ],
       "tvoption": [
         {
+          "id": 1,
           "name": "Sport TV Package",
-          "price": 149
+          "price": 149, 
+          "quantity": 1
+
         }, 
         {
+          "id": 2,
           "name": "Movie TV Package",
-          "price": 199
+          "price": 199, 
+          "quantity": 1
+
 
         }
 
@@ -298,17 +320,26 @@
       "iptelephony": [
         
         {
+          "id": 1,
           "name": "No Flatrate",
-          "price": 149
+          "price": 149, 
+          "quantity": 1
+
         }, 
         {
+          "id": 2,
           "name": "Fixed Net Flatrate",
-          "price": 199
+          "price": 199, 
+          "quantity": 1
+
 
         },
         {
+          "id": 3,
           "name": "Fixed Net and Mobile Flatrate",
-          "price": 249
+          "price": 249, 
+          "quantity": 1
+
 
         }
 
