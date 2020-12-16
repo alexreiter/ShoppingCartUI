@@ -1,9 +1,6 @@
 .container {
-  width: 80%;
-}
-
-label {
-  width: 25%;
+  width: 100%;
+  background-color: palevioletred;
 }
 
 .card-input-element + .card {
@@ -101,4 +98,8 @@ label {
 
 .card-input-element:checked + .card-input {
   box-shadow: 0 0 1px 1px lightblue;
+}
+
+.col-3 {
+  background-color: #afb8ea;
 }
