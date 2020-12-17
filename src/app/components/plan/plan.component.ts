@@ -19,6 +19,7 @@ export class PlanComponent implements OnInit {
   tvOptionSelected: string;
   ipSel: any;
   ipSelected: string;
+  cartService: any;
  
     
  
@@ -105,11 +106,25 @@ export class PlanComponent implements OnInit {
     }
       else 
       return this.radioSelected;
-      
-
+    
      }
 
-    
+       //Add item to the shopping cart
+       addItemToCart( id, name, price, quantity, img) : void {
+        let payload = {
+          id: id,
+          name: name,
+          price: price = this.calcTotalPrice(), 
+          quantity: quantity,
+          img: img
+        };
+        this.planService.addToCart(payload).subscribe(() => {
+          this.planService.getPlan(id);
+          console.log("payload =", payload)
+          alert('Product Added');
+        });
+      }
+      
 
     
 

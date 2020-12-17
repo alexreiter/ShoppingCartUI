@@ -14,14 +14,14 @@
 <!-- End -->
 
 <div class="wrapper" >
-  <div class="container"  >
-  
-      <h1>Shopping cart</h1>
+  <div class="container-fluid"  >
 
+    <div class="row">
+  
       <section  >
         <div class="spacer" >
-              <div class="col-lg-9"  >
-                <div class="container" >
+              <div class="col-lg-9" >
+
             <div class="row mt-5"  >
                 <div class="row shop-listing" >
                 <table class="table shop-table"  *ngIf = "carts">
@@ -30,12 +30,12 @@
                       <th class="b-0">Name</th>
                       <th class="b-0">Price</th>
                       <th class="b-0">Quantity</th>
-                      <th class="b-0 text-right">Total Price</th>
+                      <th class="b-0">Total Price</th>
                     </tr>
                     <tr *ngFor= "let item of carts" >
                       <td><img [src] = "item.img"></td>
                       <td>{{item.name}}</td>
-                      <td>{{item.price | currency: 'DKK'}}</td>
+                      <td>{{item.price | currency: '$'}}</td>
                       <td>
                         <button class="btn btn-primary btn-sm" (click)="increment_quantity(item.id, item.quantity,item.name, item.price, item.img)" >+</button> 
                       {{item.quantity}}                       
@@ -53,15 +53,14 @@
                   </table>
                 </div>
               </div>
-            </div>
+
+
           </div>
         </div>
       </section>
       
-
-
       <!--Summary Box starts-->
-      <div class="col summary p-5 bg-grey rounded shadow mb-5">
+      <div class="col summary p-5 bg-grey rounded shadow ">
 
         <div id="monthly">
           <div class="pricetxt">Due Monthly</div>
@@ -79,6 +78,6 @@
       </div>
 
       <!--Summary Box Ends-->
-
+    </div>
     </div>
   </div>

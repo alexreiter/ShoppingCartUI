@@ -4,6 +4,7 @@
 export class PlanDetails{
     id: number;
     name: string;
-    value: string[];
+    quantity: number;
+    price : number;
     constructor(){}
 }

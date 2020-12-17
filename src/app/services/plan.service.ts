@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, of} from 'rxjs';
 import { catchError } from 'rxjs/operators';
+import { CartItem } from '../models/cart-item';
 import { PlanDetails } from '../models/plandetails';
 
 @Injectable({
@@ -12,6 +13,7 @@ export class PlanService {
   constructor(private http: HttpClient) { }
 
   baseUrl = ('api/plan');
+  url = ('api/shoppingcart');
 
   getAll(): Observable<PlanDetails[]> {
     return this.http.get<PlanDetails[]>(this.baseUrl)
@@ -26,6 +28,11 @@ export class PlanService {
     return this.http.get<PlanDetails>(this.baseUrl).pipe(
       catchError(this.handleError<PlanDetails>(`getPlan id=${id}`))
     );
+}
+
+//post added items
+addToCart(payload){
+  return this.http.post(`${this.url}`, payload);
 }
 
 /**

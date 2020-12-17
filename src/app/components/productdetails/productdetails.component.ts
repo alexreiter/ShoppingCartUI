@@ -52,7 +52,6 @@ export class ProductdetailsComponent implements OnInit {
    ).subscribe(phone => this.phone = phone);
 
 
- // this._getProducts();
 
 
   }
