@@ -43,8 +43,7 @@
   margin-bottom: 50px;
 }
 .container-fluid {
-  width: 80%;
-  background-color: blanchedalmond;
+  width: 90%;
 }
 
 td {
@@ -137,6 +136,26 @@ h3 {
   display: inline-flex;
   float: left;
   margin-right: 20px;
+}
+
+#totalprice {
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+#subtotal {
+  font-weight: 500;
+  font-size: 1.25em;
+}
+
+.btn_delete {
+  background-color: #d30c5c;
+  color: white;
+  border-color: #d30c5c;
+  padding: 5px;
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
 }
 
 /*Order Summary grid*/

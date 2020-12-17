@@ -243,8 +243,8 @@
     {
       "id": 1,
       "name": "Demotel All in One",
-      "price": "219",
-      "quantity": 0,
+      "price": 746,
+      "quantity": 1,
       "img": "../assets/img/plan.png"
     }
   ],
@@ -252,8 +252,8 @@
     {
       "id": 1,
       "name": "Demotel All in One",
-      "quantity": 1,
       "price": 0,
+      "quantity": 1,
       "img": "../assets/img/plan.png",
       "linespeed": [
         {

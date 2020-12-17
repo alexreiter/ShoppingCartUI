@@ -30,11 +30,10 @@
                       <th class="b-0">Name</th>
                       <th class="b-0">Price</th>
                       <th class="b-0">Quantity</th>
-                      <th class="b-0">Total Price</th>
                     </tr>
                     <tr *ngFor= "let item of carts" >
                       <td><img [src] = "item.img"></td>
-                      <td>{{item.name}}</td>
+                      <td style="width: 250px;">{{item.name}}</td>
                       <td>{{item.price | currency: '$'}}</td>
                       <td>
                         <button class="btn btn-primary btn-sm" (click)="increment_quantity(item.id, item.quantity,item.name, item.price, item.img)" >+</button> 
@@ -42,10 +41,10 @@
                         <button class="btn btn-primary btn-sm" (click)="decrement_quantity(item.id, item.quantity,item.name, item.price, item.img)">-</button>
                       </td>
                      
-                      <button class="btn btn-danger" (click)="deleteItem(item.id)" >Remove</button>
+                      <button class="btn_delete "   (click)="deleteItem(item.id)" >Remove</button>
                     </tr>
                     <tr>
-                      <td colspan="3" align="right"><b>Subtotal : {{SubtotalPrice()}}</b></td>
+                      <td colspan="5" id="totalprice" align="right">Total Price :<span id="subtotal"> {{SubtotalPrice()}}</span></td>
                       <td colspan="4" align="right">
                        
                       </td>

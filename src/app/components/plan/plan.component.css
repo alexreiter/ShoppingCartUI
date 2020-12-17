@@ -1,6 +1,7 @@
 .container {
-  width: 100%;
-  background-color: palevioletred;
+  width: 90%;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .card-input-element + .card {
@@ -23,8 +24,8 @@
 
 .card-title {
   display: inline-block;
-  font-size: 1.25rem;
-  font-weight: 500;
+  font-size: 1.25em;
+  font-weight: 600;
 }
 
 .card-body {
@@ -34,19 +35,23 @@
 .card-subtitle {
   font-weight: 500;
   color: #d30c5c;
-  margin: 20px 0;
+  margin: 5px 0;
+  font-size: 1.2em;
 }
 
 ul {
   list-style: none;
   padding-inline-start: 0px;
   line-height: 1.5;
-  color: black;
+  color: #0f52ba;
+  margin-top: 10px;
+  font-size: 1em;
+  font-weight: 500;
 }
 
 .card-input-element:checked + .card::after {
   content: "\e5ca";
-  color: #afb8ea;
+  color: #ff0090;
   font-family: "Material Icons";
   font-size: 36px;
   -webkit-animation-name: fadeInCheckbox;
@@ -89,7 +94,6 @@ label {
 
 .card-input {
   margin: 10px;
-  padding: 00px;
 }
 
 .card-input:hover {
@@ -100,6 +104,67 @@ label {
   box-shadow: 0 0 1px 1px lightblue;
 }
 
-.col-3 {
-  background-color: #afb8ea;
+.price-summary {
+  height: 425px;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  box-shadow: 1px 1px 2px white, 0 0 25px lightgray, 0 0 5px #aaaaaa;
+  padding: 30px;
+  position: relative;
+  background-color: white;
+  margin: 10px;
+}
+
+.question_txt {
+  font-family: "Hammersmith One", sans-serif;
+  font-weight: 400;
+  background-color: navy;
+  padding: 10px;
+  border-radius: 3px;
+  margin: 10px;
+  color: white;
+  width: 100%;
+}
+
+.icon {
+  margin-left: 170px;
+  font-size: 2rem;
+  color: white;
+}
+
+.yesno {
+  margin-right: 20px;
+}
+
+.select_txt {
+  font-family: "Hammersmith One", sans-serif;
+  font-weight: 300;
+  background-color: lightblue;
+  color: white;
+  padding: 10px;
+  border-radius: 3px;
+  margin: 10px;
+  width: 100%;
+}
+
+.input_div {
+  margin: 20px;
+}
+
+.cart_btn {
+  width: 80%;
+  position: absolute;
+  top: 80%;
+  left: 10%;
+  height: 50px;
+  color: white;
+  background-color: #ff0090;
+  border-color: #ff0090;
+  font-size: 1.5em;
+}
+
+.price-summary-title {
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #1f1fbd;
 }
