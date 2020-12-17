@@ -19,17 +19,12 @@ export class PlanComponent implements OnInit {
   tvOptionSelected: string;
   ipSel: any;
   ipSelected: string;
-
-
-
-  @ViewChild(MatAccordion) accordion: MatAccordion;
  
     
  
    constructor(private route: ActivatedRoute,
      private router: Router,
      private planService: PlanService) { 
-      //this.getSelecteditem();
      }
  
  
@@ -74,10 +69,43 @@ export class PlanComponent implements OnInit {
     public calcTotalPrice(){
     let sum = 0;
     
-    /*
-       sum += (+this.radioSelected) + (+this.tvSelected) + (+this.tvOptionSelected) + (+this.ipSelected);
+    if((this.radioSelected && this.tvSelected && this.tvOptionSelected && this.ipSelected)){
+      sum +=(+this.radioSelected) + (+this.tvSelected) + (+this.tvOptionSelected) + (+this.ipSelected);
+      Number.isInteger(sum);
+      console.log("sum =", sum);
       return sum;
-      */
+    }
+
+    if((this.radioSelected && this.tvSelected && this.tvOptionSelected)){
+      sum +=(+this.radioSelected) + (+this.tvSelected) + (+this.tvOptionSelected);
+      Number.isInteger(sum);
+      console.log("sum =", sum);
+      return sum;
+    }
+
+    if((this.radioSelected && this.tvSelected && this.ipSelected)){
+      sum +=(+this.radioSelected) + (+this.tvSelected) + (+this.ipSelected);
+      Number.isInteger(sum);
+      console.log("sum =", sum);
+      return sum;
+    }
+
+    if((this.radioSelected && this.tvSelected)){
+      sum +=(+this.radioSelected) + (+this.tvSelected);
+      Number.isInteger(sum);
+      console.log("sum =", sum);
+      return sum;
+    }
+
+    if((this.radioSelected && this.ipSelected)){
+      sum +=(+this.radioSelected) + (+this.ipSelected);
+      Number.isInteger(sum);
+      console.log("sum =", sum);
+      return sum;
+    }
+      else 
+      return this.radioSelected;
+      
 
      }
 
@@ -88,14 +116,6 @@ export class PlanComponent implements OnInit {
 
 
     ngOnInit() : void {
-
-        /*
-    this.plan$ = this.route.paramMap.pipe(
-        switchMap((params: ParamMap) =>
-          this.planService.getPlan(parseInt(params.get('id'))
-         ))
-      );
-      */
 
      this.planService.getPlan(parseInt(('id'))).subscribe(res=>this.plan$=res);
   }
