@@ -6,14 +6,14 @@
     <div class="container" *ngFor="let plan of plan$">
 
       <h1 class="question_txt">{{plan.name}}</h1>
-      <h2 class="select_txt">You can select your Internet Subscription here:</h2>
+      <h2 class="select_txt">You can select your Internet Subscription here: <i class="fa fa-wifi icon2"></i></h2>
            
       <div class="row">
         <div class="col-8">
           <div class="row">
               <div class="col-md-6" *ngFor="let item of plan.linespeed; let i = index;">
                 <label>
-                  <input type="radio" name="internet" class="card-input-element" id="net" [(ngModel)]="radioSelected" value="{{plan.linespeed[i].price}}" (change)="onItemChange()" />
+                  <input type="radio" name="internet" class="card-input-element" id="net" [(ngModel)]="radioSelected" required value="{{plan.linespeed[i].price}}" (change)="onItemChange()" />
                     <div class="card  card-input">
                       <div class="row">
                         <div class="col-auto"><div class="card-title">{{plan.linespeed[i].name}}</div></div>
@@ -96,11 +96,17 @@
        <div *ngIf="(tvSelected || tvOptionSelected) || tvchoice=='no' ">
            <h1 class="question_txt">How about an IP-Telephony subscription? <i class="fa fa-phone icon"></i></h1>
              <div class="input_div">
-                <label> <input type="radio" class="yesno" name="telephon" value="yes" [(ngModel)]="telchoice" >Yes, I'd love to </label>
-                <label><input type="radio" class="yesno" name="telephon" value="no" [(ngModel)]="telchoice">No, thanks, I'm fine</label>
+                <label> <input type="radio" class="yesno" name="iptelephony" value="yes" [(ngModel)]="telchoice" >Yes, I'd love to </label>
+                <label><input type="radio" class="yesno" name="iptelephony" value="no" [(ngModel)]="telchoice">No, thanks, I'm fine</label>
               </div>
 
         <div *ngIf="telchoice == 'yes'">
+          
+          <div class="anumber_input">
+          <label for="quantity">How many number would you like to have? (max. 2):</label>
+          <input type="number" id="quantity" name="quantity" min="0" max="2">          
+        </div>
+
           <div class="row">
            <div class="col-sm-9" *ngFor="let item of plan.iptelephony; let i = index;">
              <label>
@@ -119,7 +125,7 @@
                                
                                 <div class="divider"></div>
   
-                                <ul>
+                                <ul class="liststyle">
                                   <li>No set-up fee</li>
                                   <li>No binding</li>
                                 </ul>
@@ -127,21 +133,71 @@
                           </label>                         
                         </div>
                       </div>
-                      </div>        
+                      </div>       
+             
+
    </div>
+
+   <div *ngIf="ipSelected || telchoice=='no' ">
+    <h1 class="question_txt">How about a Mobile phone subscription? <i class="fa fa-mobile icon"></i></h1>
+      <div class="input_div">
+         <label> <input type="radio" class="yesno" name="mobile" value="yes" [(ngModel)]="mobilechoice" >Yes, I'd love to </label>
+         <label><input type="radio" class="yesno" name="mobile" value="no" [(ngModel)]="mobilechoice">No, thanks, I'm fine</label>
+       </div>
+
+ <div *ngIf="mobilechoice == 'yes'">
+   
+   <div class="anumber_input">
+   <label for="quantity">How many number would you like to have? (max. 2):</label>
+   <input type="number" id="quantity" name="quantity" min="0" max="2">          
+ </div>
+
+   <div class="row">
+    <div class="col-sm-9" *ngFor="let item of plan.mobile; let i = index;">
+      <label>
+                     <input type="radio" name="mobile" class="card-input-element" [(ngModel)]="mobileSelected" value="{{plan.mobile[i].price}}" (change)="onMobileChange()"/>
+           
+                       <div class="card md-auto card-input">
+                         <div class="row">
+
+                           <div class="col-auto">
+                             <div class="card-title">{{plan.mobile[i].name}}</div>
+                           </div>
+                          <div class="col-auto ml-auto">
+                           <div class="card-title">{{plan.mobile[i].price}}<span>&#44;</span><span>&#45;</span><span>&#47;</span>md</div>
+                         </div>
+                         </div>
+                        
+                         <div class="divider"></div>
+
+                         <ul class="liststyle">
+                           <li>No set-up fee</li>
+                           <li>No binding</li>
+                         </ul>
+                       </div>                  
+                   </label>                         
+                 </div>
+               </div>
+               </div>          
+               
+</div>
+
+
+
  </div>
 
           <div class="col price-summary">
              <h1 class="price-summary-title">You have seledted</h1>
+             <div class="divider"></div>
 
              <!--If Internet is selected show price-->
              <div *ngIf="radioSelected">
               <div class="row">
                   <div class="col">
-                    <h4>Internet Plan:</h4>
+                    <h4 class="liststyle">Internet Plan:</h4>
                   </div>
                     <div class="col col-lg-2">
-                        <p>{{radioSelected}}</p>
+                        <p class="card-subtitle">{{radioSelected}}</p>
                     </div>
               </div>
              </div>
@@ -149,12 +205,13 @@
 
             <!--If TV package is selected show price-->
               <div *ngIf="tvSelected">
+               
                 <div class="row">
                   <div class="col" >
-                    <h4>Tv Package:</h4>
+                    <h3 class="liststyle">Tv Package:</h3>
                   </div>
                   <div class="col col-lg-2">
-                    <p>{{tvSelected}}</p>
+                    <p class="card-subtitle">{{tvSelected}}</p>
                   </div>
                 </div>
               </div>
@@ -165,43 +222,59 @@
               <div class="row">
               <div class="col">
 
-                <h4>Optional TV:</h4>
+                <h4 class="liststyle">Optional TV:</h4>
               </div>
               <div class="col col-lg-2">
 
-                <p>{{tvOptionSelected}}</p>
+                <p class="card-subtitle">{{tvOptionSelected}}</p>
               
               </div>
             </div>
           </div>
 
            <!--If IP-Telephony package is selected show price-->
-           <div *ngIf="tvOptionSelected">
+           <div *ngIf="ipSelected">
             <div class="row">
             <div class="col">
-                <h4>IP-Telephony Plan:</h4>
+                <h4 class="liststyle">IP-Telephony Plan:</h4>
               </div>
               <div class="col col-lg-2">
 
-                <p>{{ipSelected}}</p>
+                <p class="card-subtitle">{{ipSelected}}</p>
               
               </div>
             </div>
           </div>
-            <!--Tv price ends-->
+            <!--IP-Telephony price ends-->
 
-
-             <!--Show Total price-->
-              <div class="row">
-              <div class="col">
-
-                <h4>Total Price:</h4>
+             <!--If Mobile Subscription package is selected show price-->
+           <div *ngIf="mobileSelected">
+            <div class="row">
+            <div class="col">
+                <h4 class="liststyle">Mobile Subscription Plan:</h4>
               </div>
               <div class="col col-lg-2">
 
-                <p>{{calcTotalPrice()}}</p>
+                <p class="card-subtitle">{{mobileSelected}}</p>
+              
               </div>
             </div>
+          </div>
+            <!--IP-Telephony price ends-->
+
+
+             <!--Show Total price-->
+              <div class="row totalprice">
+              <div class="col" >
+
+                <h4 class="price-summary-title">Total Price:</h4>
+              </div>
+              <div class="col col-lg-2">
+
+                <p class="calcprice">{{calcTotalPrice()}}</p>
+              </div>
+            </div>
+            <!--Total Price ends-->
 
               <button class="cart_btn" (click)="addItemToCart(plan.id, plan.name, plan.price, plan.quantity, plan.img)">Add to Cart</button>
 

@@ -16,6 +16,8 @@
 <div class="wrapper" >
   <div class="container-fluid"  >
 
+<h1>You have {{countItem()}} item(s) in your cart</h1>
+
     <div class="row">
   
       <section  >
@@ -44,6 +46,7 @@
                       <button class="btn_delete "   (click)="deleteItem(item.id)" >Remove</button>
                     </tr>
                     <tr>
+                      <td colspan="2"><button class="goback_btn" routerLink="/shop" routerLinkActive="active">Go Back To Shop</button></td>
                       <td colspan="5" id="totalprice" align="right">Total Price :<span id="subtotal"> {{SubtotalPrice()}}</span></td>
                       <td colspan="4" align="right">
                        

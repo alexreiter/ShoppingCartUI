@@ -74,6 +74,15 @@ total: number;
       return sum;
      }
 
+     public countItem(){
+       let sum= 0;
+       for(let id in this.carts){
+         sum += this.carts[id].quantity + this.carts[id].quantity;
+         console.log("sum = ", sum)
+
+         return sum;
+       }
+     }
   
       
 

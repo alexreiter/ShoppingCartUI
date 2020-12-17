@@ -11,7 +11,7 @@ import { PlanService } from 'src/app/services/plan.service';
 export class PlanComponent implements OnInit {
 
   plan$ : any = [];
-  radioSel:any;
+  radioSel:boolean = true;
   radioSelected:string;
   tvSelected:string; 
   tvSel: any;
@@ -19,7 +19,10 @@ export class PlanComponent implements OnInit {
   tvOptionSelected: string;
   ipSel: any;
   ipSelected: string;
+  mobileSel: any;
+  mobileSelected: string;
   cartService: any;
+  
  
     
  
@@ -47,6 +50,11 @@ export class PlanComponent implements OnInit {
       
       this.ipSel = this.plan$.find(plan => plan.value === this.ipSelected);
     }
+
+    getSelectedMobile(){
+      
+      this.mobileSel = this.plan$.find(plan => plan.value === this.mobileSelected);
+    }
     onItemChange(){
       this.getSelecteditem();
       console.log("radioSelected = ", this.radioSelected);
@@ -67,9 +75,23 @@ export class PlanComponent implements OnInit {
       console.log("ipSelected = ", this.ipSelected);
     }
 
+    onMobileChange(){
+      this.getSelectedMobile();
+      console.log("mobileSelected = ", this.mobileSelected);
+    }
+
+   
     public calcTotalPrice(){
     let sum = 0;
     
+    if((this.radioSelected && this.tvSelected && this.tvOptionSelected && this.ipSelected && this.mobileSelected)){
+      sum +=(+this.radioSelected) + (+this.tvSelected) + (+this.tvOptionSelected) + (+this.ipSelected) + (+this.mobileSelected);
+      Number.isInteger(sum);
+      console.log("sum =", sum);
+      return sum;
+    }
+
+
     if((this.radioSelected && this.tvSelected && this.tvOptionSelected && this.ipSelected)){
       sum +=(+this.radioSelected) + (+this.tvSelected) + (+this.tvOptionSelected) + (+this.ipSelected);
       Number.isInteger(sum);
@@ -125,10 +147,6 @@ export class PlanComponent implements OnInit {
         });
       }
       
-
-    
-
-
 
     ngOnInit() : void {
 

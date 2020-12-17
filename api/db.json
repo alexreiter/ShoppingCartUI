@@ -228,24 +228,24 @@
   "shoppingcart": [
     {
       "id": 2,
-      "quantity": 4,
+      "quantity": 2,
       "name": "Samsung Galaxy S20 FE",
       "price": 6560,
       "img": "../assets/img/GalaxyS20.png"
     },
     {
-      "id": 7,
-      "quantity": 1,
-      "price": 6560,
-      "name": "Samsung Galaxy Nore 20",
-      "img": "../assets/img/galaxynote20.png"
+      "id": 1,
+      "quantity": 2,
+      "name": "Demotel All in One",
+      "price": "219",
+      "img": "../assets/img/plan.png"
     },
     {
-      "id": 1,
-      "name": "Demotel All in One",
-      "price": 746,
+      "id": 6,
       "quantity": 1,
-      "img": "../assets/img/plan.png"
+      "price": 6560,
+      "name": "Samsung Galaxy S10",
+      "img": "../assets/img/galaxyS10png.png"
     }
   ],
   "plan": [
@@ -319,6 +319,13 @@
           "id": 3,
           "name": "Fixed Net and Mobile Flatrate",
           "price": 249
+        }
+      ],
+      "mobile": [
+        {
+          "id": 1,
+          "name": "Mobile Subscription",
+          "price": 149
         }
       ]
     }

@@ -8,5 +8,7 @@ export class CartItem {
    constructor(public phone: Phone, public quantity: number, public price: number){}
 
    get totalPrice() { return (this.phone.price * this.quantity) + this.price;}
+
+   get totalItem(){return (this.quantity)}
     
 }

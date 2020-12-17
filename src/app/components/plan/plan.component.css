@@ -43,6 +43,9 @@ ul {
   list-style: none;
   padding-inline-start: 0px;
   line-height: 1.5;
+}
+
+.liststyle {
   color: #0f52ba;
   margin-top: 10px;
   font-size: 1em;
@@ -126,10 +129,16 @@ label {
   width: 100%;
 }
 
-.icon {
-  margin-left: 170px;
+.icon,
+.icon2 {
+  float: right;
   font-size: 2rem;
   color: white;
+  margin-right: 20px;
+}
+
+.icon2 {
+  padding: 5px;
 }
 
 .yesno {
@@ -152,19 +161,35 @@ label {
 }
 
 .cart_btn {
-  width: 80%;
+  width: 85%;
   position: absolute;
   top: 80%;
-  left: 10%;
+  left: 8%;
   height: 50px;
   color: white;
   background-color: #ff0090;
   border-color: #ff0090;
   font-size: 1.5em;
+  border-radius: 5px;
 }
 
 .price-summary-title {
   font-size: 1.5em;
   font-weight: 600;
   color: #1f1fbd;
+}
+
+.totalprice {
+  position: absolute;
+  top: 65%;
+}
+
+.calcprice {
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #d30c5c;
+}
+
+.anumber_input {
+  margin: 10px;
 }
