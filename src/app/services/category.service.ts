@@ -13,6 +13,7 @@ export class CategoryService {
   constructor(private http: HttpClient) { }
   
 
+  //Gets all categories
   getCategories(){
     return this.http.get('/api/categories');
   }

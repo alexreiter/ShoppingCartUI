@@ -1,5 +1,15 @@
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
-
 body {
   background-color: #f2f2f2;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
 }

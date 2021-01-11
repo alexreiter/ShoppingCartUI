@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, of} from 'rxjs';
 import { catchError } from 'rxjs/operators';
-import { CartItem } from '../models/cart-item';
+import { CartItem } from '../models/cartitem';
 import { PlanDetails } from '../models/plandetails';
 
 @Injectable({
@@ -30,22 +30,15 @@ export class PlanService {
     );
 }
 
-//post added items
-addToCart(payload){
-  return this.http.post(`${this.url}`, payload);
+//Add item to the cart
+addToCart(payload) : Observable<CartItem>{
+  return this.http.post<CartItem>(`${this.url}`, payload);
 }
 
-/**
- * Handle Http operation that failed.
- * Let the app continue.
- * @param operation - name of the operation that failed
- * @param result - optional value to return as the observable result
- */
+
 private handleError<T>(operation = 'operation', result?: T) {
   return (error: any): Observable<T> => {
-
     console.error(error); // log to console instead
-
       return of(result as T);
   };
 }

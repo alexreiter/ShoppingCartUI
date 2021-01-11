@@ -22,7 +22,6 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { HttpClientModule } from '@angular/common/http';
-import { OrderSuccessComponent } from './components/order-success/order-success.component';
 import { CategoryService } from './services/category.service';
 import { PhonesService } from './services/phones.service';
 import { CartService } from './services/cart.service';
@@ -31,6 +30,7 @@ import { PlanService } from './services/plan.service';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { PlanComponent} from './components/plan/plan.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { OrderComponent } from './components/order/order.component';
 
 
 
@@ -49,9 +49,9 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     LoginComponent,
     ShoppingcartComponent,
     CheckoutComponent,
-    OrderSuccessComponent,
     ProductdetailsComponent,
-    PlanComponent
+    PlanComponent,
+    OrderComponent
     
   ],
   

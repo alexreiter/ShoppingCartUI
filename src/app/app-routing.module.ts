@@ -6,20 +6,27 @@ import { PlansComponent } from './components/plans/plans.component';
 import { LoginComponent } from './components/login/login.component';
 import { ShoppingcartComponent } from './components/shoppingcart/shoppingcart.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
-import { OrderSuccessComponent } from './components/order-success/order-success.component';
 import { ProductdetailsComponent } from './components/productdetails/productdetails.component';
 import { PlanComponent } from './components/plan/plan.component';
+import { OrderComponent } from './components/order/order.component';
 
 const routes: Routes = [
+
+  {
+    path: '',
+    redirectTo: '/',
+    pathMatch: 'full'
+  },
+
   {path: 'shop', component: ShopComponent}, 
   {path: 'phones', component: PhonesComponent}, 
   {path: 'plans', component: PlansComponent}, 
   {path: 'login', component: LoginComponent}, 
   {path: 'shoppingcart', component: ShoppingcartComponent},
   {path: 'checkout', component: CheckoutComponent},
-  {path: 'order-success', component: OrderSuccessComponent},
   { path: 'phones/:id', component: ProductdetailsComponent },
   {path: 'plan', component: PlanComponent},
+  {path: 'order', component: OrderComponent}
 
 
 
@@ -37,7 +44,7 @@ export const routingComponents = [
   LoginComponent, 
   ShoppingcartComponent, 
   CheckoutComponent, 
-  OrderSuccessComponent, 
+  OrderComponent, 
   ProductdetailsComponent,
   PlanComponent
 ]

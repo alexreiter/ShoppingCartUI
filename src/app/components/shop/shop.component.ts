@@ -10,14 +10,17 @@ import { Component } from '@angular/core';
 
 export class ShopComponent {
 
-  public slides = [
+ 
+  public marketing = [
     
-    { src: '../../assets/img/Sale.png'},
-    { src: '../../assets/img/BlackFriday.png'},
-    { src: '../../assets/img/iphone.png' }
+    { img: '../../assets/img/Phones.png'},
+    { img: '../../assets/img/Tablet.png'},
+    { img: '../../assets/img/SIM.png' },
+    { img: '../../assets/img/Internet.png'},
+    { img: '../../assets/img/Accessories.png'},
+    { img: '../../assets/img/offers.png' },
   
   ];
-
 
   constructor() { 
 

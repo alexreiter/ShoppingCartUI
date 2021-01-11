@@ -172,20 +172,17 @@
         <ul class="shopping-cart-items" *ngFor= "let item of carts">
           <li class="clearfix">
             <img  [src]="item.img" />
+         
             <span class="item-name">{{item.name}}</span>
-            
-            <span class="item-quantity">{{item.quantity}}</span>
-            <span class="item-quantity">{{item.price}}</span>
-
-            
-            <i class="fa fa-trash" id="minicart_icon"></i>
+            <div class="pricetag"> {{item.price | currency: 'DKK': 'symbol' : '1.0-0'}} </div>         
+            <i class="fa fa-trash" id="minicart_icon" ></i>
             <i class="fa fa-heart" id="minicart_icon"></i>
             <span class="item-price"></span>
           </li>
 
         </ul>
           <span class="total-label">Total:</span>
-          <span class="pricetag">$2,229.97</span>
+          <span class="pricetag">{{SubtotalPrice() | currency: 'DKK': 'symbol' : '1.0-0' }}</span>
   
           <button class="checkout_btn" routerLink="/shoppingcart" routerLinkActive="active">Checkout</button>
         </div>

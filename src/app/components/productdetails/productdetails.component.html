@@ -19,7 +19,7 @@
          <div>
            <h2 id="memory">Memory</h2>
            <div class="fx-row">
-             <button class="memory_btn selected">{{phone.memory}}</button>
+             <button class="memory_btn selected">64 GB</button>
              <button class="memory_btn">128 GB</button>
              <button class="memory_btn">256 GB</button>
            </div>
@@ -60,7 +60,7 @@
    
              <!--Subscription Plan table starts here-->
              <div class="plan-table" style="background-color: white;">
-               <table>
+               <table >
                    <tr id="table_header" ><th colspan="4" >Subscription Plans</th></tr>
    
                    <tr >
@@ -123,24 +123,19 @@
                       
                        <td>
                            <div id="pricetag"><p>249 kr/month</p></div>
-                           <input type="radio">
                        </td>
    
                        <td>
                        <div id="pricetag"><p>199 kr/month</p></div>
-                       <input type="radio"> 
                    </td>  
    
                         <td>
                        <div id="pricetag"><p>149 kr/month</p></div>
-                       <input type="radio"> 
                    </td>  
    
                    <td>
                        <div id="pricetag"><p>79 kr/month</p></div>
-                       <input type="radio"> 
                    </td>  
-   
                      </tr>
                  </table>
              </div>
@@ -210,7 +205,7 @@
                      <th>
                        <a href="#" id="paymentduration">
                          <div class="label">Pay as you Go</div>
-                         <div class="value">5125 kr</div>
+                         <div class="value">{{phone.price}}</div>
                        </a>
                      </th>
                  </tr>
@@ -233,7 +228,7 @@
                          <div class="subscriptionprice">
                          <div>1 kr</div>
                          <div>350 kr</div>
-                         <div>6501 kr</div>
+                         <div>{{phone.price}}</div>
                        </div>
                        </div>
    
@@ -250,16 +245,16 @@
                  <tr>
                  <td colspan="2"> 
                    <div class="textstyle">
-                     <div>Apple iPhone 11 without subscription plan:</div>
+                     <div>{{phone.name}} without subscription plan:</div>
                      <div>Mobil discount:</div>
-                     <div>Apple iPhone 11 128 GB with subscription plan: </div>
+                     <div>{{phone.name}} 128 GB with subscription plan: </div>
                    </div>
    
                  </td>
    
                  <td colspan="2"> 
                    <div class="totalpricetxt">
-                   <div>5799 kr</div>
+                   <div>{{phone.price}}</div>
                    <div>674 kr</div>
                    <div>5125 kr</div>
                  </div>

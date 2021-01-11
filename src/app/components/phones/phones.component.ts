@@ -4,7 +4,6 @@ import { HttpClient } from '@angular/common/http';
 import { CategoryService } from '../../services/category.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PhonesService } from '../../services/phones.service';
-import { ProductdetailsComponent } from '../productdetails/productdetails.component';
 import { Phone } from '../../models/phone';
 
     @Component({
@@ -16,13 +15,9 @@ import { Phone } from '../../models/phone';
 
     export class PhonesComponent implements OnInit{
 
-
-      //Modal Properties
       category : string;
       categories$;
       phones$;
-
-      
       phones : Observable<Phone[]>;
 
       
@@ -31,15 +26,16 @@ import { Phone } from '../../models/phone';
         private router: Router,
         categoryService: CategoryService, 
         private phonesService: PhonesService){ 
-          this.phones$ = this.phonesService.getAll();
-          this.categories$ = categoryService.getCategories();
 
+          //Fetches all items from the backend
+          this.phones$ = this.phonesService.getAll();
+
+          //Fetches all categories from the backend
+          this.categories$ = categoryService.getCategories();
           route.queryParamMap.subscribe(params =>{
           this.category = params.get('category');
 
           });
-
-         
 
       }
 

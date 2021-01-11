@@ -15,6 +15,7 @@ export class ProductdetailsComponent implements OnInit {
 
   @Input('show-actions') showActions = true;
   phone : Phone;
+  plan$ : any = [];
 
 
 
@@ -22,8 +23,6 @@ export class ProductdetailsComponent implements OnInit {
               private route: ActivatedRoute, 
               private phonesService: PhonesService, 
               private cartService: CartService){}
-
-              
               
            //Add item to the shopping cart
               addItemToCart( id, quantity, price, name, img) : void {
@@ -40,8 +39,6 @@ export class ProductdetailsComponent implements OnInit {
                 });
               }
               
-
-            
 
    ngOnInit() : void {
  

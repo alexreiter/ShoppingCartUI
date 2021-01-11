@@ -1,0 +1,41 @@
+.container-fluid {
+  width: 80%;
+}
+
+input {
+  width: 30%;
+}
+
+.next_btn {
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  border-color: rgb(80, 80, 228);
+  background-color: rgb(80, 80, 228);
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.back_btn {
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  border-color: navy;
+  background-color: navy;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.submit_btn {
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  border-color: #d30c5c;
+  background-color: #d30c5c;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 25px 20px;
+}

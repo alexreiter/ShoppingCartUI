@@ -34,13 +34,8 @@
             </div>
 
         <div *ngIf="radioSelected">
-          <h1 class="question_txt">Would you like to subscribe to IP-TV, too?<i class="fa fa-tv icon" ></i></h1>
-            <div class="input_div">
-              <label ><input type="radio" class="yesno" name="tv" value="yes" [(ngModel)]="tvchoice" >Yes, I'd love to </label>
-              <label ><input type="radio" class="yesno" name="tv" value="no" [(ngModel)]="tvchoice">No, thanks, I'm fine</label>
-            </div>
+          
 
-        <div *ngIf="tvchoice == 'yes'">
             <h2 class="select_txt">Select a TV-package: </h2>
               <div class="row">
                 <div class="col-sm-6" *ngFor="let item of plan.tvpackage; let i = index;">
@@ -64,7 +59,6 @@
                             </label>
                           </div>
                         </div>
-                      </div>                    
                     </div>
                    
       <div *ngIf="tvSelected">
@@ -93,15 +87,7 @@
       </div>
     </div>
 
-       <div *ngIf="(tvSelected || tvOptionSelected) || tvchoice=='no' ">
-           <h1 class="question_txt">How about an IP-Telephony subscription? <i class="fa fa-phone icon"></i></h1>
-             <div class="input_div">
-                <label> <input type="radio" class="yesno" name="iptelephony" value="yes" [(ngModel)]="telchoice" >Yes, I'd love to </label>
-                <label><input type="radio" class="yesno" name="iptelephony" value="no" [(ngModel)]="telchoice">No, thanks, I'm fine</label>
-              </div>
-
-        <div *ngIf="telchoice == 'yes'">
-          
+       <div *ngIf="(tvSelected || tvOptionSelected) ">
           <div class="anumber_input">
           <label for="quantity">How many number would you like to have? (max. 2):</label>
           <input type="number" id="quantity" name="quantity" min="0" max="2">          
@@ -133,20 +119,10 @@
                           </label>                         
                         </div>
                       </div>
-                      </div>       
-             
-
    </div>
 
    <div *ngIf="ipSelected || telchoice=='no' ">
-    <h1 class="question_txt">How about a Mobile phone subscription? <i class="fa fa-mobile icon"></i></h1>
-      <div class="input_div">
-         <label> <input type="radio" class="yesno" name="mobile" value="yes" [(ngModel)]="mobilechoice" >Yes, I'd love to </label>
-         <label><input type="radio" class="yesno" name="mobile" value="no" [(ngModel)]="mobilechoice">No, thanks, I'm fine</label>
-       </div>
-
- <div *ngIf="mobilechoice == 'yes'">
-   
+      
    <div class="anumber_input">
    <label for="quantity">How many number would you like to have? (max. 2):</label>
    <input type="number" id="quantity" name="quantity" min="0" max="2">          
@@ -178,12 +154,8 @@
                    </label>                         
                  </div>
                </div>
-               </div>          
                
 </div>
-
-
-
  </div>
 
           <div class="col price-summary">
@@ -278,13 +250,11 @@
 
               <button class="cart_btn" (click)="addItemToCart(plan.id, plan.name, plan.price, plan.quantity, plan.img)">Add to Cart</button>
 
-           <!-- 
-            <div *ngIf="ipSelected || telchoice=='no'">
+              <div class="row">
 
-              <h1>Shop other products, see our latest deals here</h1>
-              <button class="cart_btn" routerLink="/shop" routerLinkActive="active">Go to the shop</button>
-            </div>
-            -->
+
+              </div>
+          
 
           </div>
 

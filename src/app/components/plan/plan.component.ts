@@ -1,5 +1,4 @@
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
-import { MatAccordion } from '@angular/material/expansion';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { PlanService } from 'src/app/services/plan.service';
 
@@ -23,15 +22,13 @@ export class PlanComponent implements OnInit {
   mobileSelected: string;
   cartService: any;
   
- 
-    
- 
+
    constructor(private route: ActivatedRoute,
      private router: Router,
      private planService: PlanService) { 
      }
  
- 
+ //Gets selected option
      getSelecteditem(){
       this.radioSel = this.plan$.find(plan => plan.value === this.radioSelected);
     }
@@ -81,6 +78,7 @@ export class PlanComponent implements OnInit {
     }
 
    
+    //Calculates the total price based on the selected option
     public calcTotalPrice(){
     let sum = 0;
     
@@ -131,10 +129,9 @@ export class PlanComponent implements OnInit {
     
      }
 
-       //Add item to the shopping cart
+       //Add a plan to the shopping cart
        addItemToCart( id, name, price, quantity, img) : void {
         let payload = {
-          id: id,
           name: name,
           price: price = this.calcTotalPrice(), 
           quantity: quantity,
@@ -146,7 +143,6 @@ export class PlanComponent implements OnInit {
           alert('Product Added');
         });
       }
-      
 
     ngOnInit() : void {
 

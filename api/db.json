@@ -6,11 +6,6 @@
       "title": "Galaxy A21s",
       "name": "Samsung Galaxy A21s",
       "quantity": 1,
-      "memory": [
-        "64GB",
-        "128GB",
-        "256GB"
-      ],
       "specification": {
         "camera": "48MP",
         "chargingtime": "Fast-charge capable",
@@ -23,7 +18,7 @@
         "processor": "EXYNOS 850 Octa-core 2.0Ghz",
         "facialrecognition": "Yes"
       },
-      "upfront": "200 kr upfront",
+      "upfront": 200,
       "monthly": "140 kr/month (36 months)",
       "price": 6560,
       "color": "red, blue, black, grey",
@@ -48,7 +43,7 @@
         "processor": "Exynos 990 (up to 2.75GHz)",
         "facialrecognition": "Yes"
       },
-      "upfront": "175 kr upfront",
+      "upfront": 175,
       "monthly": "155 kr/month (36 months)",
       "price": 6560,
       "color": "bronze, blue, black, grey",
@@ -74,7 +69,7 @@
         "processor": "A13 Bionic",
         "facialrecognition": "Yes"
       },
-      "upfront": "200 kr upfront",
+      "upfront": 200,
       "monthly": "155 kr/month (36 months)",
       "price": 6560,
       "color": "bronze, blue, black, grey",
@@ -99,7 +94,7 @@
         "processor": "Huawei Kirin 980",
         "facialrecognition": "Yes"
       },
-      "upfront": "100 kr upfront",
+      "upfront": 100,
       "monthly": "145 kr/month (36 months)",
       "price": 6560,
       "color": "bronze, blue, black, grey",
@@ -124,7 +119,7 @@
         "processor": "A14 Bionic",
         "facialrecognition": "Yes"
       },
-      "upfront": "175 kr upfront",
+      "upfront": 175,
       "monthly": "165 kr/month (36 months)",
       "price": 6560,
       "color": "bronze, blue, black, grey",
@@ -149,7 +144,7 @@
         "processor": "Exynos 9820",
         "facialrecognition": "Yes"
       },
-      "upfront": "250 kr upfront",
+      "upfront": 250,
       "monthly": "185 kr/month (36 months)",
       "price": 6560,
       "color": "bronze, blue, black, grey",
@@ -161,7 +156,7 @@
       "brand": "Samsung",
       "title": "Galaxy Note 20",
       "name": "Samsung Galaxy Nore 20",
-      "upfront": "225 kr upfront",
+      "upfront": 225,
       "quantity": 1,
       "specification": {
         "camera": "64MP",
@@ -199,7 +194,7 @@
         "processor": "HUAWEI Kirin 980 CPU, Octa-core, 2 x Cortex A76 2.6 GHz + 2 x Cortex A76 1.92 GHz + 4 x Cortex A55 1.8Hz",
         "facialrecognition": "Yes"
       },
-      "upfront": "200 kr upfront",
+      "upfront": 200,
       "monthly": "185 kr/month (36 months)",
       "price": 6560,
       "color": "bronze, blue, black, grey",
@@ -227,25 +222,11 @@
   ],
   "shoppingcart": [
     {
-      "id": 2,
-      "quantity": 2,
-      "name": "Samsung Galaxy S20 FE",
-      "price": 6560,
-      "img": "../assets/img/GalaxyS20.png"
-    },
-    {
-      "id": 1,
-      "quantity": 2,
       "name": "Demotel All in One",
-      "price": "219",
-      "img": "../assets/img/plan.png"
-    },
-    {
-      "id": 6,
+      "price": 497,
       "quantity": 1,
-      "price": 6560,
-      "name": "Samsung Galaxy S10",
-      "img": "../assets/img/galaxyS10png.png"
+      "img": "../assets/img/plan.png",
+      "id": 2
     }
   ],
   "plan": [

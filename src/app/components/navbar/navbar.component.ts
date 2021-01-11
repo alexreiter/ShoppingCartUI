@@ -19,12 +19,23 @@ cartItemCount = 0;
 
   collapsed=true;
 
+
+//Fetches all items in a shoppingcart
   _getCart(): void{
     this.cartService.getCartItems().subscribe(carts => {
       console.log("carts = " , carts);
       return carts = carts;
     })
   }
+
+  //Calculates the total price in the mini cart
+  public SubtotalPrice(){
+    let sum = 0;
+    for (let id in this.carts)
+    sum += this.carts[id].price * this.carts[id].quantity;
+    console.log("sum = ", sum)
+    return sum;
+   }
   
    ngOnInit(): void {
     this._getCart();
@@ -34,17 +45,6 @@ cartItemCount = 0;
         this.cartService.getCartItems()
         )
      ).subscribe(carts => this.carts = carts);
-
-
-     /*
-     let cart$ = await this.cartService.getCartItems();
-     cart$.subscribe(carts => {
-       this.cartItemCount = 0;
-       for (let id in this.carts.items){
-         this.cartItemCount += this.carts.items[id].quantity;
-       }
-     });
-     */
 
   }
 

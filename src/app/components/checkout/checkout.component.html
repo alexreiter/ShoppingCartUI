@@ -2,46 +2,90 @@
 
 
 
-<body>
 
     <div class="wrap">
-        <div class="container-fluid">
+        <div class="container-fluid" >
 
-    
-                <mat-horizontal-stepper linear>
-
+    <form [formGroup] = "checkoutForm">
+                <mat-horizontal-stepper horizontal>
                     <mat-step label="Info">
-                        <p>Your Details</p>
 
-                        <button mat-button matStepperNext>Next</button>
+                        <h5>Your Details</h5>
+
+                        <input  id="firstname" class="form-control mb-4" formControlName="firstname" placeholder="First Name" required>
+               <input type="text" id="lastname" class="form-control mb-4" placeholder="Last Name">
+
+                        <input type="email" id="email" class="form-control mb-4" placeholder="E-mail">
+                        <input type="phone" id="phone" class="form-control mb-4" placeholder="Phone nr">
+
+
+                        <button class="next_btn" matStepperNext>Next</button>
 
                     </mat-step>
 
                     <mat-step label="Shipping">
-                        <p>Shipping</p>
+                        <h5>Shipping</h5>
+
+                        <input type="text" id="adressline1" class="form-control mb-4" placeholder="Adress Line 1">
+                        <input type="text" id="adressline2" class="form-control mb-4" placeholder="Adress Line 2">
+
+                        <input type="text" id="city" class="form-control mb-4" placeholder="City">
+                        <input type="text" id="country" class="form-control mb-4" placeholder="Country">
+                        <input type="text" id="zip" class="form-control mb-4" placeholder="Postal Code">
+                     
+
+                        
+
+                          <h5>Select shipping method</h5>
+
+                          <div class="radio">
+                            <label><input type="radio" name="optradio" checked>GLS- Pakkeshop</label>
+                          </div>
+                          <div class="radio">
+                            <label><input type="radio" name="optradio">GLS- Home Delivery</label>
+                          </div>
+                          <div class="radio disabled">
+                            <label><input type="radio" name="optradio">PostNord - Pakkeshop</label>
+                          </div>
+                          <div class="radio disabled">
+                            <label><input type="radio" name="optradio">PostNord - Home Delivery</label>
+                          </div>
+
+
                         <div>
-                            <button mat-button matStepperPrevious>Back</button>
-                            <button mat-button matStepperNext>Next</button>
+                            <button class="back_btn" matStepperPrevious>Back</button>
+                            <button class="next_btn" matStepperNext>Next</button>
 
                         </div>
                     </mat-step>
 
-                    <mat-step label="Summary">
-                        <p>Order Summary</p>
-                        <button mat-button matStepperPrevious>Back</button>
-                        <button mat-button matStepperNext>Next</button>
-                    </mat-step>
-
-                    
                     <mat-step label="Payment">
-                        <p>Payment</p>
-                        <button mat-button matStepperPrevious>Back</button>
+                        <h5>Payment</h5>
+
+                        <div class="radio">
+                            <label><input type="radio" name="optradio" checked>Credit Card</label>
+                          </div>
+                          <div class="radio">
+                            <label><input type="radio" name="optradio">MobilPay</label>
+                          </div>
+                          <div class="radio disabled">
+                            <label><input type="radio" name="optradio">PayPal</label>
+                          </div>
+                          <div class="radio disabled">
+                            <label><input type="radio" name="optradio">Viabill</label>
+                          </div>
+
+                        <button class="back_btn" matStepperPrevious>Back</button>
                     </mat-step>
 
+                 
                 </mat-horizontal-stepper>
-          
+
+                  <button class="submit_btn" type="submit" routerLink="/order" routerLinkActive="active">Submit</button>
+
+               
+            </form>
 
             </div>
     </div>
 
-</body>
